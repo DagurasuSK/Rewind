@@ -6,7 +6,7 @@ const MAX_SPEED = 150.0 # Velocidade máxima
 const JUMP_VELOCITY = -400.0 # Velocidade do pulo
 const AIR_ACCELERATION = 150.0 # Aceleração no ar
 const NO_INPUT_TIME = 0.65 # Tempo que o personagem fica sem controle 
-const COYOTE_TIME = 0.2 # Duração do coyote time
+const COYOTE_TIME = 0.2  # Duração do coyote time
 
 var speed: float:
 	set(new_value):
