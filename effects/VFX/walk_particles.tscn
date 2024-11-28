@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8gx6n4y4762v"]
+
+[sub_resource type="Gradient" id="Gradient_p56tq"]
+offsets = PackedFloat32Array(0, 0.512821, 0.863248)
+colors = PackedColorArray(0.305882, 0.12549, 0, 0.847059, 0.54902, 0.431373, 0.34902, 0.823529, 1, 1, 1, 0)
+
+[node name="walkParticles" type="CPUParticles2D"]
+emitting = false
+amount = 24
+lifetime = 0.8
+emission_shape = 3
+emission_rect_extents = Vector2(2, 1)
+gravity = Vector2(0, -8)
+scale_amount_max = 2.0
+color_ramp = SubResource("Gradient_p56tq")

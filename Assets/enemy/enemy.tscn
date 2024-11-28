@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://ba0w8dffilii5"]
+
+[ext_resource type="Texture2D" uid="uid://c86dilhb58li4" path="res://Assets/enemy/enemy.png" id="1_qtxi7"]
+[ext_resource type="Script" path="res://scripts/enemy_area.gd" id="2_n7c4x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0bdch"]
+size = Vector2(12, 16)
+
+[node name="PathFollow2D" type="PathFollow2D"]
+loop = false
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_qtxi7")
+
+[node name="EnemyArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("2_n7c4x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyArea"]
+shape = SubResource("RectangleShape2D_0bdch")
+disabled = true
+
+[connection signal="body_entered" from="EnemyArea" to="EnemyArea" method="_on_body_entered"]
