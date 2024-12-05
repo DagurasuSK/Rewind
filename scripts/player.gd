@@ -1,12 +1,12 @@
 extends CharacterBody2D
 
-const HORIZONTAL_ACCELERATION = 5.0 # Aceleração horizontal
-const SPEED_AIR = 75.0 # Velocidade horizontal no ar
-const MAX_SPEED = 150.0 # Velocidade máxima
-const JUMP_VELOCITY = -400.0 # Velocidade do pulo
-const AIR_ACCELERATION = 150.0 # Aceleração no ar
-const NO_INPUT_TIME = 0.65 # Tempo que o personagem fica sem controle 
-const COYOTE_TIME = 0.2  # Duração do coyote time
+const HORIZONTAL_ACCELERATION := 5.0 # Aceleração horizontal
+const SPEED_AIR := 75.0 # Velocidade horizontal no ar
+const MAX_SPEED := 150.0 # Velocidade máxima
+const JUMP_VELOCITY := -400.0 # Velocidade do pulo
+const AIR_ACCELERATION := 150.0 # Aceleração no ar
+const NO_INPUT_TIME := 0.65 # Tempo que o personagem fica sem controle 
+const COYOTE_TIME := 0.2  # Duração do coyote time
 
 var speed: float:
 	set(new_value):
@@ -29,6 +29,7 @@ func _process(delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	_movement_horizontal(delta)
 	_movement_vertical(delta)
+	_handle_slowMotion()
 	move_and_slide()
 
 #region Movimento Horizontal
@@ -132,3 +133,13 @@ func _handle_effects():
 	else:
 		$WalkParticles.emitting = false
 		
+
+#region slowmotion
+#deixa o jogo em camera lenta
+func _handle_slowMotion():
+	const GAME_DEFAULT_SPEED := 1.0
+	var game_slow_motion := 0.25
+	if Input.is_action_pressed("slowMotion"):
+		Engine.time_scale = game_slow_motion
+	else:
+		Engine.time_scale = GAME_DEFAULT_SPEED
