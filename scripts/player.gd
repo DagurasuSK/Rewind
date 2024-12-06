@@ -11,6 +11,11 @@ const GAME_DEFAULT_SPEED := 1.0
 
 var game_slow_motion := 0.25
 
+const DASH_SPEED := 300 # Velocidade do dash
+const DASH_DURATION := 0.4 # Duração do dash
+
+var _input_add_tick: float = 0.0
+
 var speed: float:
 	set(new_value):
 		speed = clamp(new_value, -MAX_SPEED, MAX_SPEED)
@@ -19,6 +24,10 @@ var _no_input_tick: float = 0.0: # Tick do personagem sem controle
 	set(new_value):
 		_no_input_tick = clampf(new_value, 0.0, INF)
 
+var _no_movement_tick: float = 0.0: # Tick do personagem sem aplicar movimento algum
+	set(new_value):
+		_no_movement_tick = clampf(new_value, 0.0, INF)
+		
 var _old_direction: float # Direção do input no frame anterior
 
 var _can_press_jump_button: bool = false # Verifica o botão de pulo pode ser pressionado
@@ -26,15 +35,46 @@ var _can_jump: bool = false # Verifica se pode pular do chão
 var _can_wall_jump: bool = false # Verifica se pode pular da parede
 var _last_time_jump_pressed: float = 0 # Contador desde a última vez que o botão de pulo foi pressionado, recebe o valor de COYOTE_TIME, e aplica o pulo caso seja maior que 0
 
+var _can_dash: bool = false
+
+func _ready() -> void:
+	PlayerPosition.add_position(global_position)
+
 func _process(delta: float) -> void:
 	_handle_effects()
 
 func _physics_process(delta: float) -> void:
-	_movement_horizontal(delta)
-	_movement_vertical(delta)
+	_movement(delta)
 	_handle_slowMotion(delta)
+	
+	_update_current_input(delta)
 	move_and_slide()
 
+#region Gerenciamento do array de input
+func _update_current_input(delta) -> void:
+	_input_add_tick += delta
+	if _input_add_tick >= PlayerPosition.STEP_TIME:
+		PlayerPosition.add_position(global_position)
+		_input_add_tick = 0
+		
+#endregion
+
+#region Movimento geral
+# Gerencia o movimento do personagem, caso _no_movement_tick seja maior que 0 ignora as outras funções
+func _movement(delta):
+	if _no_movement_tick > 0.0:
+		if is_on_wall() or is_on_floor():
+			_no_movement_tick = 0.0
+
+		_no_movement_tick -= delta
+		return
+	
+	_movement_vertical(delta)
+	_movement_horizontal(delta)
+	_dash()
+	
+#endregion
+	
 #region Movimento Horizontal
 func _movement_horizontal(delta) -> void:
 	if _no_input_tick > 0:
@@ -76,12 +116,8 @@ func _movement_air(delta) -> void: # Movimento horizontal do personagem no ar
 #region Movimento Vertical
 # Gerencia o movimento vertical do personagem e aplica gravidade caso necessário
 func _movement_vertical(delta) -> void:
-	# Adiciona gravidade ao personagem
-	if not is_on_floor():
-		if is_on_wall() and velocity.y > 0:
-			velocity.y = 60
-		else:
-			velocity += get_gravity() * delta
+	
+	_apply_gravity(delta)
 	
 	_check_coyote_time(delta) # Calcula as váriaveis do coyote time
 
@@ -103,6 +139,7 @@ func _check_coyote_time(delta: float) -> void:
 		_can_press_jump_button = true
 		_can_jump = true
 		_can_wall_jump = false
+		_can_dash = true
 	
 	if is_on_wall_only(): # Se estiver nas paredes reseta as variáveis
 		_can_press_jump_button = true
@@ -116,6 +153,14 @@ func _check_coyote_time(delta: float) -> void:
 	if not _can_press_jump_button:
 		_last_time_jump_pressed -= delta
 
+# Adiciona gravidade ao personagem
+func _apply_gravity(delta) -> void:
+	if not is_on_floor():
+		if is_on_wall() and velocity.y > 0:
+			velocity.y = 60
+		else:
+			velocity += get_gravity() * delta
+
 func _jump(delta) -> void:
 	velocity.y = JUMP_VELOCITY
 
@@ -126,6 +171,18 @@ func _wall_jump() -> void:
 	velocity.y = JUMP_VELOCITY
 	_old_direction = wall_normal.x
 	_no_input_tick = NO_INPUT_TIME
+	
+func _dash() -> void:
+	if not _can_dash:
+		return
+	
+	if not Input.is_action_just_pressed("dash"):
+		return
+	
+	velocity.x = _old_direction * DASH_SPEED
+	velocity.y = 0.0
+	_no_movement_tick = DASH_DURATION
+	_can_dash = false
 	
 #endregion
 # Lida com os efeitos do personagem
