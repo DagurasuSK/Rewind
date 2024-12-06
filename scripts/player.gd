@@ -7,6 +7,9 @@ const JUMP_VELOCITY := -400.0 # Velocidade do pulo
 const AIR_ACCELERATION := 150.0 # Aceleração no ar
 const NO_INPUT_TIME := 0.65 # Tempo que o personagem fica sem controle 
 const COYOTE_TIME := 0.2  # Duração do coyote time
+const GAME_DEFAULT_SPEED := 1.0
+
+var game_slow_motion := 0.25
 
 var speed: float:
 	set(new_value):
@@ -122,7 +125,6 @@ func _wall_jump() -> void:
 	velocity.x = wall_normal.x * MAX_SPEED
 	velocity.y = JUMP_VELOCITY
 	_old_direction = wall_normal.x
-	
 	_no_input_tick = NO_INPUT_TIME
 	
 #endregion
@@ -137,12 +139,11 @@ func _handle_effects():
 #region slowmotion
 #deixa o jogo em camera lenta
 func _handle_slowMotion(delta):
-	const GAME_DEFAULT_SPEED := 1.0
-	var game_slow_motion := 0.25
+
 	if Input.is_action_pressed("slowMotion"):
 		#Engine.time_scale = game_slow_motion
-		Engine.time_scale = lerp(game_slow_motion,GAME_DEFAULT_SPEED,  delta)
+		Engine.time_scale = lerp(Engine.time_scale, game_slow_motion,  0.1)
 	else:
-		Engine.time_scale = lerp(GAME_DEFAULT_SPEED, game_slow_motion,  delta)
+		Engine.time_scale = lerp(Engine.time_scale, GAME_DEFAULT_SPEED,  0.5)
 		#Engine.time_scale = GAME_DEFAULT_SPEED
 #endregion
