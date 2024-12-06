@@ -29,7 +29,7 @@ func _process(delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	_movement_horizontal(delta)
 	_movement_vertical(delta)
-	_handle_slowMotion()
+	_handle_slowMotion(delta)
 	move_and_slide()
 
 #region Movimento Horizontal
@@ -136,10 +136,13 @@ func _handle_effects():
 
 #region slowmotion
 #deixa o jogo em camera lenta
-func _handle_slowMotion():
+func _handle_slowMotion(delta):
 	const GAME_DEFAULT_SPEED := 1.0
 	var game_slow_motion := 0.25
 	if Input.is_action_pressed("slowMotion"):
-		Engine.time_scale = game_slow_motion
+		#Engine.time_scale = game_slow_motion
+		Engine.time_scale = lerp(game_slow_motion,GAME_DEFAULT_SPEED,  delta)
 	else:
-		Engine.time_scale = GAME_DEFAULT_SPEED
+		Engine.time_scale = lerp(GAME_DEFAULT_SPEED, game_slow_motion,  delta)
+		#Engine.time_scale = GAME_DEFAULT_SPEED
+#endregion
