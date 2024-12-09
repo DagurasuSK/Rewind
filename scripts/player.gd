@@ -9,7 +9,7 @@ const NO_INPUT_TIME := 0.65 # Tempo que o personagem fica sem controle
 const COYOTE_TIME := 0.2  # Duração do coyote time
 const GAME_DEFAULT_SPEED := 1.0
 
-var game_slow_motion := 0.25
+var game_slow_motion := -1.0
 
 const DASH_SPEED := 300 # Velocidade do dash
 const DASH_DURATION := 0.4 # Duração do dash
@@ -40,12 +40,12 @@ var _can_dash: bool = false
 func _ready() -> void:
 	PlayerPosition.add_position(global_position)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	_handle_effects()
 
 func _physics_process(delta: float) -> void:
 	_movement(delta)
-	_handle_slowMotion(delta)
+	_handle_slowMotion()
 	
 	_update_current_input(delta)
 	move_and_slide()
@@ -128,7 +128,7 @@ func _movement_vertical(delta) -> void:
 			_last_time_jump_pressed = 0
 			
 		if _can_jump:
-			_jump(delta)
+			_jump()
 			_can_jump = false
 			_last_time_jump_pressed = 0
 			_can_press_jump_button = true
@@ -161,7 +161,7 @@ func _apply_gravity(delta) -> void:
 		else:
 			velocity += get_gravity() * delta
 
-func _jump(delta) -> void:
+func _jump() -> void:
 	velocity.y = JUMP_VELOCITY
 
 # Aplica o wall jumpd
@@ -195,7 +195,7 @@ func _handle_effects():
 
 #region slowmotion
 #deixa o jogo em camera lenta
-func _handle_slowMotion(delta):
+func _handle_slowMotion():
 
 	if Input.is_action_pressed("slowMotion"):
 		#Engine.time_scale = game_slow_motion

@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=4 uid="uid://dtlk6bhd7dyuy"]
 
-[ext_resource type="Script" path="res://scripts/stage.gd" id="1_4jvrf"]
-[ext_resource type="PackedScene" uid="uid://bfdhgj3bwxnrh" path="res://Assets/player/player.tscn" id="2_163pe"]
-[ext_resource type="Texture2D" uid="uid://bxb2clatl46rl" path="res://icon.svg" id="3_5sb4k"]
+[ext_resource type="Script" path="res://scripts/stage.gd" id="1_s6uuo"]
+[ext_resource type="PackedScene" uid="uid://bfdhgj3bwxnrh" path="res://assets/player/player.tscn" id="2_pubf8"]
+[ext_resource type="Texture2D" uid="uid://bxb2clatl46rl" path="res://icon.svg" id="3_45g8a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b0red"]
-texture = ExtResource("3_5sb4k")
+texture = ExtResource("3_45g8a")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -80,9 +80,9 @@ sources/0 = SubResource("TileSetAtlasSource_b0red")
 background_color = Color(0.560902, 1.99261e-05, 0.41973, 1)
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_4jvrf")
+script = ExtResource("1_s6uuo")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_163pe")]
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_pubf8")]
 position = Vector2(179, -169)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
