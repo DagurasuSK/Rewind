@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://67fp3fdutm0q"]
+
+[ext_resource type="Script" path="res://assets/stage/portal_area.gd" id="1_c06cl"]
+
+[sub_resource type="Curve" id="Curve_g81tm"]
+max_value = 10.0
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 10), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_j27ko"]
+curve = SubResource("Curve_g81tm")
+
+[sub_resource type="Curve" id="Curve_4s1x2"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.376543, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_xd75d"]
+curve = SubResource("Curve_4s1x2")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4hci4"]
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(10, 10, 10)
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 1.0
+emission_ring_radius = 1.0
+emission_ring_inner_radius = 1.0
+gravity = Vector3(0, 0, 0)
+radial_accel_min = -32.26
+radial_accel_max = -2.23517e-06
+radial_accel_curve = SubResource("CurveTexture_j27ko")
+tangential_accel_min = 7.53
+tangential_accel_max = 22.58
+scale_min = 0.35
+scale_curve = SubResource("CurveTexture_xd75d")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6h835"]
+
+[node name="Portal" type="Node2D"]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+amount = 100
+process_material = SubResource("ParticleProcessMaterial_4hci4")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_c06cl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_6h835")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
