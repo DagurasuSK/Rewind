@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://is4dsxt8dhto"
-path="res://.godot/imported/player.png-e230e05e2d932a710303ee07f401e40f.ctex"
+uid="uid://66lf6o65ey8o"
+path="res://.godot/imported/ryan_3.jpg-03486f11c780206ec5ad9d161bfb2d64.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/player/player.png"
-dest_files=["res://.godot/imported/player.png-e230e05e2d932a710303ee07f401e40f.ctex"]
+source_file="res://assets/menu/wallpaper/ryan_3.jpg"
+dest_files=["res://.godot/imported/ryan_3.jpg-03486f11c780206ec5ad9d161bfb2d64.ctex"]
 
 [params]
 

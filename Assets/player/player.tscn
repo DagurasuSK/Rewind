@@ -17,7 +17,5 @@ texture = ExtResource("2_7onex")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_a2m7q")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-
 [node name="WalkParticles" parent="." instance=ExtResource("3_ce6ct")]
 position = Vector2(0, 7)

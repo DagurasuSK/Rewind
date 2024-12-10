@@ -43,3 +43,6 @@ func _set_next_target() -> void:
 	# Atualiza o índice e a posição-alvo
 	_position_index += 1
 	_target_position = PlayerPosition.position_arr[_position_index]
+
+func _on_area_2d_body_entered(_body: Node2D) -> void:
+	StageManager.reload_stage()

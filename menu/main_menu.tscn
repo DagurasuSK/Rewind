@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://e0ndsfid0wtf"]
+[gd_scene load_steps=6 format=3 uid="uid://e0ndsfid0wtf"]
 
+[ext_resource type="Theme" uid="uid://bgespdhrhpd1" path="res://themes/menu_theme.tres" id="1_0buon"]
 [ext_resource type="Script" path="res://menu/main_menu_logic.gd" id="1_phfwy"]
 [ext_resource type="Script" path="res://menu/options_menu_logic.gd" id="2_h8yve"]
+[ext_resource type="FontFile" uid="uid://ca5071ujymnd8" path="res://fonts/Commodore Angled v1.2.ttf" id="2_rmukg"]
+[ext_resource type="FontFile" uid="uid://bc2huhedlkuid" path="res://fonts/easvhs.ttf" id="3_83dtf"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -10,6 +13,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_0buon")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -24.0
+offset_top = -25.0
+offset_right = 663.0
+offset_bottom = 392.0
+color = Color(0, 0, 0, 1)
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1
@@ -21,9 +33,29 @@ grow_vertical = 2
 
 [node name="MainMenuContainer" type="VBoxContainer" parent="CenterContainer"]
 unique_name_in_owner = true
-visible = false
 layout_mode = 2
 script = ExtResource("1_phfwy")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/MainMenuContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Re" type="Label" parent="CenterContainer/MainMenuContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.941176, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_rmukg")
+theme_override_font_sizes/font_size = 21
+text = "RE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Wind" type="Label" parent="CenterContainer/MainMenuContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_83dtf")
+text = "WIND"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="NewGameButton" type="Button" parent="CenterContainer/MainMenuContainer"]
 layout_mode = 2
@@ -43,6 +75,7 @@ text = "Quit"
 
 [node name="OptionsContainer" type="VBoxContainer" parent="CenterContainer"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 theme_override_constants/separation = 24
 script = ExtResource("2_h8yve")
@@ -66,7 +99,7 @@ layout_mode = 2
 layout_mode = 2
 text = "Fullscreen"
 
-[node name="CheckButton" type="CheckButton" parent="CenterContainer/OptionsContainer/FullscreenContainer"]
+[node name="CheckButton" type="CheckBox" parent="CenterContainer/OptionsContainer/FullscreenContainer"]
 layout_mode = 2
 
 [node name="BackButton" type="Button" parent="CenterContainer/OptionsContainer"]

@@ -1,0 +1,27 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://bgespdhrhpd1"]
+
+[ext_resource type="FontFile" uid="uid://bngyfebh5qse4" path="res://fonts/kenney/Kenney Pixel.ttf" id="1_usj0u"]
+[ext_resource type="Texture2D" uid="uid://bw66mwx6g7bmb" path="res://assets/menu/slider_grabber.png" id="2_br1m5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8ck88"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h7ieo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o0t4m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_egveo"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_aano5"]
+grow_begin = 0.0
+thickness = 6
+
+[resource]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/fonts/font = ExtResource("1_usj0u")
+CheckBox/styles/focus = SubResource("StyleBoxEmpty_8ck88")
+CheckBox/styles/hover = SubResource("StyleBoxEmpty_h7ieo")
+HSlider/icons/grabber = ExtResource("2_br1m5")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_o0t4m")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_egveo")
+HSlider/styles/slider = SubResource("StyleBoxLine_aano5")
+Label/fonts/font = ExtResource("1_usj0u")

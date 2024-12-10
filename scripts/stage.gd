@@ -9,8 +9,7 @@ var spawn_timer: float = 1.0:
 var spawn_tick: float = 0.0
 
 func _ready() -> void:
-	await get_tree().create_timer(1.0).timeout
-	spawn_enemy()
+	PlayerPosition.clear_position()
 
 func _physics_process(delta: float) -> void:
 	spawn_tick += delta
@@ -21,6 +20,6 @@ func _physics_process(delta: float) -> void:
 
 # Spawna um novo inimigo e adiciona no array de inimigos
 func spawn_enemy():
-	var new_enemy = preload("res://Assets/enemy/enemy.tscn").instantiate()
+	var new_enemy = preload("res://assets/enemy/enemy.tscn").instantiate()
 	enemy_arr.append(new_enemy)
 	add_child(new_enemy)

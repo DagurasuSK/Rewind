@@ -6,3 +6,6 @@ var position_arr: Array[Vector2]
 
 func add_position(new_position: Vector2):
 	position_arr.append(new_position)
+
+func clear_position():
+	position_arr.clear()

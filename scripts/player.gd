@@ -9,7 +9,7 @@ const NO_INPUT_TIME := 0.65 # Tempo que o personagem fica sem controle
 const COYOTE_TIME := 0.2  # Duração do coyote time
 const GAME_DEFAULT_SPEED := 1.0
 
-var game_slow_motion := -1.0
+var game_slow_motion := 0.2
 
 const DASH_SPEED := 300 # Velocidade do dash
 const DASH_DURATION := 0.4 # Duração do dash
@@ -37,6 +37,8 @@ var _last_time_jump_pressed: float = 0 # Contador desde a última vez que o bot�
 
 var _can_dash: bool = false
 
+var world_limit = Vector2(0, 250)
+
 func _ready() -> void:
 	PlayerPosition.add_position(global_position)
 
@@ -49,6 +51,11 @@ func _physics_process(delta: float) -> void:
 	
 	_update_current_input(delta)
 	move_and_slide()
+	set_world_limit()
+
+func set_world_limit() -> void:
+	if position.y > world_limit.y:
+		StageManager.reload_stage()
 
 #region Gerenciamento do array de input
 func _update_current_input(delta) -> void:
