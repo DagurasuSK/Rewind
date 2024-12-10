@@ -6,7 +6,7 @@ colors = PackedColorArray(0.305882, 0.12549, 0, 0.847059, 0.54902, 0.431373, 0.3
 
 [node name="walkParticles" type="CPUParticles2D"]
 emitting = false
-amount = 24
+amount = 50
 lifetime = 0.8
 emission_shape = 3
 emission_rect_extents = Vector2(2, 1)
