@@ -5,8 +5,7 @@ func _ready() -> void:
 
 func _on_new_game_button_pressed() -> void:
 	StageManager.go_to_next_stage()
-	print(get_parent().get_parent())
-	#get_parent().get_parent().queue_free()
+	Stopwatch.play()
 
 func _on_options_button_pressed() -> void:
 	visible = false
