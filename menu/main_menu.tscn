@@ -14,52 +14,31 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_0buon")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_left = -24.0
-offset_top = -25.0
-offset_right = 663.0
-offset_bottom = 392.0
-color = Color(0, 0, 0, 1)
-
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_direction = 3
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -360.0
-offset_top = -240.0
-offset_right = 360.0
-offset_bottom = 240.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 stream = ExtResource("7_oklkj")
 autoplay = true
+expand = true
 loop = true
 
 [node name="MainMenuContainer" type="VBoxContainer" parent="."]
 unique_name_in_owner = true
 layout_mode = 2
-offset_left = 58.0
-offset_top = 211.0
-offset_right = 186.0
-offset_bottom = 339.0
+offset_left = 20.0
+offset_top = 212.0
+offset_right = 99.345
+offset_bottom = 340.0
 script = ExtResource("1_phfwy")
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MainMenuContainer"]
-layout_mode = 2
-theme_override_constants/separation = 0
-alignment = 1
 
 [node name="NewGameButton" type="Button" parent="MainMenuContainer"]
 layout_mode = 2
 text = "New Game"
-
-[node name="ContinueButton" type="Button" parent="MainMenuContainer"]
-layout_mode = 2
-text = "Continue"
 
 [node name="OptionsButton" type="Button" parent="MainMenuContainer"]
 layout_mode = 2
@@ -73,8 +52,10 @@ text = "Quit"
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
-offset_right = 216.0
-offset_bottom = 104.0
+offset_left = 241.0
+offset_top = 104.0
+offset_right = 457.0
+offset_bottom = 232.0
 theme_override_constants/separation = 24
 script = ExtResource("2_h8yve")
 
@@ -92,6 +73,7 @@ value = 50.0
 
 [node name="FullscreenContainer" type="HBoxContainer" parent="OptionsContainer"]
 layout_mode = 2
+alignment = 1
 
 [node name="Label" type="Label" parent="OptionsContainer/FullscreenContainer"]
 layout_mode = 2
