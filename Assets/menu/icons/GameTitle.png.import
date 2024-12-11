@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkbpm3jnqclbp"
-path="res://.godot/imported/ryan_1.jpeg-e091849ed8df47576b7b781a59870cb7.ctex"
+uid="uid://dh6stogd657d5"
+path="res://.godot/imported/GameTitle.png-7e9f1735577f5f155370b7c12d5ea446.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/menu/wallpaper/ryan_1.jpeg"
-dest_files=["res://.godot/imported/ryan_1.jpeg-e091849ed8df47576b7b781a59870cb7.ctex"]
+source_file="res://Assets/menu/icons/GameTitle.png"
+dest_files=["res://.godot/imported/GameTitle.png-7e9f1735577f5f155370b7c12d5ea446.ctex"]
 
 [params]
 

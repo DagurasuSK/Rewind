@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://e0ndsfid0wtf"]
+[gd_scene load_steps=5 format=3 uid="uid://e0ndsfid0wtf"]
 
 [ext_resource type="Theme" uid="uid://bgespdhrhpd1" path="res://themes/menu_theme.tres" id="1_0buon"]
 [ext_resource type="Script" path="res://menu/main_menu_logic.gd" id="1_phfwy"]
 [ext_resource type="Script" path="res://menu/options_menu_logic.gd" id="2_h8yve"]
-[ext_resource type="FontFile" uid="uid://ca5071ujymnd8" path="res://fonts/Commodore Angled v1.2.ttf" id="2_rmukg"]
-[ext_resource type="FontFile" uid="uid://bc2huhedlkuid" path="res://fonts/easvhs.ttf" id="3_83dtf"]
+[ext_resource type="VideoStream" path="res://Assets/menu/icons/Rewind.ogv" id="7_oklkj"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -23,92 +22,91 @@ offset_right = 663.0
 offset_bottom = 392.0
 color = Color(0, 0, 0, 1)
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -360.0
+offset_top = -240.0
+offset_right = 360.0
+offset_bottom = 240.0
 grow_horizontal = 2
 grow_vertical = 2
+stream = ExtResource("7_oklkj")
+autoplay = true
+loop = true
 
-[node name="MainMenuContainer" type="VBoxContainer" parent="CenterContainer"]
+[node name="MainMenuContainer" type="VBoxContainer" parent="."]
 unique_name_in_owner = true
 layout_mode = 2
+offset_left = 58.0
+offset_top = 211.0
+offset_right = 186.0
+offset_bottom = 339.0
 script = ExtResource("1_phfwy")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/MainMenuContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MainMenuContainer"]
 layout_mode = 2
 theme_override_constants/separation = 0
 alignment = 1
 
-[node name="Re" type="Label" parent="CenterContainer/MainMenuContainer/HBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.941176, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_rmukg")
-theme_override_font_sizes/font_size = 21
-text = "RE"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Wind" type="Label" parent="CenterContainer/MainMenuContainer/HBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_83dtf")
-text = "WIND"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="NewGameButton" type="Button" parent="CenterContainer/MainMenuContainer"]
+[node name="NewGameButton" type="Button" parent="MainMenuContainer"]
 layout_mode = 2
 text = "New Game"
 
-[node name="ContinueButton" type="Button" parent="CenterContainer/MainMenuContainer"]
+[node name="ContinueButton" type="Button" parent="MainMenuContainer"]
 layout_mode = 2
 text = "Continue"
 
-[node name="OptionsButton" type="Button" parent="CenterContainer/MainMenuContainer"]
+[node name="OptionsButton" type="Button" parent="MainMenuContainer"]
 layout_mode = 2
 text = "Options"
 
-[node name="QuitButton" type="Button" parent="CenterContainer/MainMenuContainer"]
+[node name="QuitButton" type="Button" parent="MainMenuContainer"]
 layout_mode = 2
 text = "Quit"
 
-[node name="OptionsContainer" type="VBoxContainer" parent="CenterContainer"]
+[node name="OptionsContainer" type="VBoxContainer" parent="."]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
+offset_right = 216.0
+offset_bottom = 104.0
 theme_override_constants/separation = 24
 script = ExtResource("2_h8yve")
 
-[node name="SoundVolume" type="HBoxContainer" parent="CenterContainer/OptionsContainer"]
+[node name="SoundVolume" type="HBoxContainer" parent="OptionsContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="CenterContainer/OptionsContainer/SoundVolume"]
+[node name="Label" type="Label" parent="OptionsContainer/SoundVolume"]
 layout_mode = 2
 text = "0%"
 
-[node name="HSlider" type="HSlider" parent="CenterContainer/OptionsContainer/SoundVolume"]
+[node name="HSlider" type="HSlider" parent="OptionsContainer/SoundVolume"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 value = 50.0
 
-[node name="FullscreenContainer" type="HBoxContainer" parent="CenterContainer/OptionsContainer"]
+[node name="FullscreenContainer" type="HBoxContainer" parent="OptionsContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="CenterContainer/OptionsContainer/FullscreenContainer"]
+[node name="Label" type="Label" parent="OptionsContainer/FullscreenContainer"]
 layout_mode = 2
 text = "Fullscreen"
 
-[node name="CheckButton" type="CheckBox" parent="CenterContainer/OptionsContainer/FullscreenContainer"]
+[node name="CheckButton" type="CheckBox" parent="OptionsContainer/FullscreenContainer"]
 layout_mode = 2
 
-[node name="BackButton" type="Button" parent="CenterContainer/OptionsContainer"]
+[node name="BackButton" type="Button" parent="OptionsContainer"]
 layout_mode = 2
 text = "Back"
 
-[connection signal="pressed" from="CenterContainer/MainMenuContainer/NewGameButton" to="CenterContainer/MainMenuContainer" method="_on_new_game_button_pressed"]
-[connection signal="pressed" from="CenterContainer/MainMenuContainer/OptionsButton" to="CenterContainer/MainMenuContainer" method="_on_options_button_pressed"]
-[connection signal="pressed" from="CenterContainer/MainMenuContainer/QuitButton" to="CenterContainer/MainMenuContainer" method="_on_quit_button_pressed"]
-[connection signal="value_changed" from="CenterContainer/OptionsContainer/SoundVolume/HSlider" to="CenterContainer/OptionsContainer" method="_on_h_slider_value_changed"]
-[connection signal="toggled" from="CenterContainer/OptionsContainer/FullscreenContainer/CheckButton" to="CenterContainer/OptionsContainer" method="_on_check_button_toggled"]
-[connection signal="pressed" from="CenterContainer/OptionsContainer/BackButton" to="CenterContainer/OptionsContainer" method="_on_back_button_pressed"]
+[connection signal="pressed" from="MainMenuContainer/NewGameButton" to="MainMenuContainer" method="_on_new_game_button_pressed"]
+[connection signal="pressed" from="MainMenuContainer/OptionsButton" to="MainMenuContainer" method="_on_options_button_pressed"]
+[connection signal="pressed" from="MainMenuContainer/QuitButton" to="MainMenuContainer" method="_on_quit_button_pressed"]
+[connection signal="value_changed" from="OptionsContainer/SoundVolume/HSlider" to="OptionsContainer" method="_on_h_slider_value_changed"]
+[connection signal="toggled" from="OptionsContainer/FullscreenContainer/CheckButton" to="OptionsContainer" method="_on_check_button_toggled"]
+[connection signal="pressed" from="OptionsContainer/BackButton" to="OptionsContainer" method="_on_back_button_pressed"]
