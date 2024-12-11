@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=4 uid="uid://cfx57rkrh68pi"]
 
 [ext_resource type="Script" path="res://scripts/stage.gd" id="1_yvtvk"]
-[ext_resource type="PackedScene" uid="uid://dx0iv3hpajmud" path="res://assets/tileset/tile_map.tscn" id="2_hrdtv"]
-[ext_resource type="PackedScene" uid="uid://bfdhgj3bwxnrh" path="res://assets/player/player.tscn" id="3_sb4qa"]
-[ext_resource type="PackedScene" uid="uid://67fp3fdutm0q" path="res://assets/stage/portal.tscn" id="4_swicb"]
+[ext_resource type="PackedScene" uid="uid://dx0iv3hpajmud" path="res://Assets/tileset/tile_map.tscn" id="2_hrdtv"]
+[ext_resource type="PackedScene" uid="uid://bfdhgj3bwxnrh" path="res://Assets/player/player.tscn" id="3_sb4qa"]
+[ext_resource type="PackedScene" uid="uid://67fp3fdutm0q" path="res://Assets/stage/portal.tscn" id="4_swicb"]
 
 [node name="Stage1" type="Node2D"]
 script = ExtResource("1_yvtvk")
