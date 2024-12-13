@@ -1,25 +1,25 @@
 [gd_scene load_steps=6 format=4 uid="uid://ddblfmcyudgdj"]
 
-[ext_resource type="Script" path="res://scripts/stage.gd" id="1_qrd23"]
-[ext_resource type="PackedScene" uid="uid://dx0iv3hpajmud" path="res://assets/tileset/tile_map.tscn" id="2_qibvi"]
-[ext_resource type="PackedScene" uid="uid://bfdhgj3bwxnrh" path="res://assets/player/player.tscn" id="2_vjx7q"]
-[ext_resource type="PackedScene" uid="uid://67fp3fdutm0q" path="res://assets/stage/portal.tscn" id="3_cid27"]
-[ext_resource type="PackedScene" uid="uid://cmdwjwvngnxgq" path="res://effects/VFX/CRT.tscn" id="5_ao1gi"]
+[ext_resource type="Script" path="res://scripts/stage.gd" id="1_vqai7"]
+[ext_resource type="PackedScene" uid="uid://dx0iv3hpajmud" path="res://assets/tileset/tile_map.tscn" id="2_60esi"]
+[ext_resource type="PackedScene" uid="uid://bfdhgj3bwxnrh" path="res://assets/player/player.tscn" id="3_4k1vt"]
+[ext_resource type="PackedScene" uid="uid://67fp3fdutm0q" path="res://assets/stage/portal.tscn" id="4_4b6du"]
+[ext_resource type="PackedScene" uid="uid://dd45r3s3jbvmg" path="res://effects/VFX/CRT.tscn" id="5_mqmds"]
 
 [node name="Stage1" type="Node2D"]
-script = ExtResource("1_qrd23")
+script = ExtResource("1_vqai7")
 
-[node name="TileMapLayer" parent="." instance=ExtResource("2_qibvi")]
+[node name="TileMapLayer" parent="." instance=ExtResource("2_60esi")]
 tile_map_data = PackedByteArray("AADt/woAAAABAAAAAADu/woAAAABAAAAAADv/woAAAABAAAAAADw/woAAAABAAAAAADx/woAAAABAAAAAADy/woAAAABAAAAAADz/woAAAABAAAAAAD0/woAAAABAAAAAAAJAAoAAAABAAAAAAAKAAoAAAABAAAAAAALAAoAAAABAAAAAAAMAAoAAAABAAAAAAANAAoAAAABAAAAAAAOAAoAAAABAAAAAAAPAAoAAAABAAAAAAAQAAoAAAABAAAAAAARAAoAAAABAAAAAAASAAoAAAABAAAAAAATAAoAAAAHAAIAAAATAPX/AAADAAEAAAATAPb/AAADAAEAAAATAPf/AAADAAEAAAATAPj/AAADAAEAAAATAPn/AAADAAEAAAATAPr/AAADAAEAAAATAPv/AAADAAEAAAATAPz/AAADAAEAAAATAP3/AAADAAEAAAATAP7/AAADAAEAAAATAP//AAADAAEAAAATAAAAAAADAAEAAAATAAEAAAADAAEAAAATAAIAAAADAAEAAAATAAMAAAADAAEAAAATAAQAAAADAAEAAAATAAUAAAADAAEAAAATAAYAAAADAAEAAAATAAcAAAADAAEAAAATAAgAAAADAAEAAAATAAkAAAADAAEAAADs/wAAAAADAAEAAADs/woAAAAEAAIAAAATAAsAAAACAAIAAAASAAsAAAABAAIAAAARAAsAAAABAAIAAAAQAAsAAAABAAIAAAAPAAsAAAABAAIAAAAOAAsAAAABAAIAAAANAAsAAAABAAIAAAAMAAsAAAABAAIAAAALAAsAAAABAAIAAAAKAAsAAAABAAIAAAAJAAsAAAABAAIAAAD0/wsAAAABAAIAAADz/wsAAAABAAIAAADy/wsAAAABAAIAAADx/wsAAAABAAIAAADw/wsAAAABAAIAAADv/wsAAAABAAIAAADu/wsAAAABAAIAAADt/wsAAAABAAIAAADs/wsAAAAAAAIAAAATAPT/AAAHAAAAAAASAPT/AAABAAMAAAARAPT/AAABAAMAAAAQAPT/AAABAAMAAAAPAPT/AAABAAMAAAAOAPT/AAABAAMAAAANAPT/AAABAAMAAAAMAPT/AAABAAMAAAALAPT/AAABAAMAAAAKAPT/AAABAAMAAAAJAPT/AAABAAMAAAAIAPT/AAABAAMAAAAHAPT/AAABAAMAAAAGAPT/AAABAAMAAAAFAPT/AAABAAMAAAAEAPT/AAABAAMAAAADAPT/AAABAAMAAAACAPT/AAABAAMAAAABAPT/AAABAAMAAAAAAPT/AAABAAMAAAD///T/AAABAAMAAAD+//T/AAABAAMAAAD9//T/AAABAAMAAAD8//T/AAABAAMAAAD7//T/AAABAAMAAAD6//T/AAABAAMAAAD5//T/AAABAAMAAAD4//T/AAABAAMAAAD3//T/AAABAAMAAAD2//T/AAABAAMAAAD1//T/AAABAAMAAAD0//T/AAABAAMAAADz//T/AAABAAMAAADy//T/AAABAAMAAADx//T/AAABAAMAAADw//T/AAABAAMAAADv//T/AAABAAMAAADu//T/AAABAAMAAADt//T/AAABAAMAAADs//T/AAAEAAAAAADs/wkAAAADAAEAAADs/wgAAAADAAEAAADs/wcAAAADAAEAAADs/wYAAAADAAEAAADs/wUAAAADAAEAAADs/wQAAAADAAEAAADs/wMAAAADAAEAAADs/wIAAAADAAEAAADs/wEAAAADAAEAAADs////AAADAAEAAADs//7/AAADAAEAAADs//3/AAADAAEAAADs//z/AAADAAEAAADs//v/AAADAAEAAADs//r/AAADAAEAAADs//n/AAADAAEAAADs//j/AAADAAEAAADs//f/AAADAAEAAADs//b/AAADAAEAAADs//X/AAADAAEAAAAIAAoAAAAAAAAAAAAIAAsAAAAAAAIAAAD3/woAAAACAAAAAAD2/woAAAABAAAAAAD1/woAAAABAAAAAAD3/wsAAAACAAIAAAD2/wsAAAABAAIAAAD1/wsAAAABAAIAAAAAAAsAAAACAAIAAAAAAAoAAAACAAAAAAD//wsAAAAAAAIAAAD//woAAAAAAAAAAAA=")
 
-[node name="Player" parent="." instance=ExtResource("2_vjx7q")]
+[node name="Player" parent="." instance=ExtResource("3_4k1vt")]
 position = Vector2(-275, 143)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="Portal" parent="." instance=ExtResource("3_cid27")]
+[node name="Portal" parent="." instance=ExtResource("4_4b6du")]
 position = Vector2(235, 138)
 
-[node name="CanvasLayer" parent="." instance=ExtResource("5_ao1gi")]
+[node name="CanvasLayer" parent="." instance=ExtResource("5_mqmds")]
 offset = Vector2(320, 180)
 transform = Transform2D(1, 0, 0, 1, 320, 180)

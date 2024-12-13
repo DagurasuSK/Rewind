@@ -9,6 +9,6 @@ func _on_check_button_toggled(toggled_on: bool) -> void:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
-
+		
 func _on_h_slider_value_changed(value: float) -> void:
 	$SoundVolume/Label.text = "{0}%".format([value])

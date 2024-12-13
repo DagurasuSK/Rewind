@@ -1,17 +1,19 @@
 extends Node
 
-const STAGE_PATH = "res://stage/stage_{0}.tscn"
+const STAGE_PATH = "res://stage/levels/stage_{0}.tscn"
 const STAGE_END = "res://stage/end_stage.tscn"
 
 var stage_index: int = 0
-var total_stages: int = DirAccess.open("res://stage").get_files().size() - 1
+var total_stages: int = DirAccess.open("res://stage/levels").get_files().size()
 var current_stage: Node
+
 
 func go_to_next_stage() -> void:
 	stage_index += 1
 	
 	if stage_index > total_stages:
 		_go_to_end_stage()
+		print("Aqui")
 		return
 	
 	go_to_specific_stage(stage_index)
@@ -42,4 +44,5 @@ func _go_to_end_stage() -> void:
 		current_stage.queue_free()
 		
 	get_tree().call_deferred("change_scene_to_file", STAGE_END)
+	PlayerPosition.clear_position()
 	

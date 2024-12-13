@@ -37,7 +37,7 @@ func _movement(delta: float) -> void:
 
 # Atualiza a posição-alvo para o próximo valor da do array de posições
 func _set_next_target() -> void:
-	if _position_index >= PlayerPosition.position_arr.size():
+	if _position_index > PlayerPosition.position_arr.size():
 		return  # Sem mais alvos para seguir
 
 	# Atualiza o índice e a posição-alvo

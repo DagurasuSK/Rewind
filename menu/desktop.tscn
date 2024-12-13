@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://bgespdhrhpd1" path="res://themes/menu_theme.tres" id="1_5wa4j"]
 [ext_resource type="Script" path="res://menu/desktop_menu.gd" id="2_c8iuj"]
-[ext_resource type="Texture2D" uid="uid://66lf6o65ey8o" path="res://assets/menu/wallpaper/ryan_3.jpg" id="3_sdo23"]
+[ext_resource type="Texture2D" uid="uid://bkbpm3jnqclbp" path="res://assets/menu/wallpaper/ryan_1.jpeg" id="3_pfwoy"]
 [ext_resource type="Texture2D" uid="uid://1kcwg1e8n01s" path="res://assets/menu/icons/full_life.png" id="4_gat8x"]
 [ext_resource type="Texture2D" uid="uid://bwd1n0frh5tmr" path="res://assets/menu/icons/docs.png" id="5_38tg5"]
 [ext_resource type="Texture2D" uid="uid://bddi114e4iuc2" path="res://assets/menu/icons/mauro69.png" id="6_s48bh"]
@@ -26,7 +26,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_sdo23")
+texture = ExtResource("3_pfwoy")
 expand_mode = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]

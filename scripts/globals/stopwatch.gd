@@ -10,12 +10,11 @@ func _ready() -> void:
 	
 	timer_label = Label.new()
 	timer_label.set_theme(load("res://themes/menu_theme.tres"))
-	timer_label.size
 	timer_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
 	timer_label.custom_minimum_size = Vector2i(40, 20)
 	add_child(timer_label)
 	timer_label.global_position = Vector2(viewport_size.x - 100, -viewport_size.y + 10)
-	timer_label.z_index = 1
+	timer_label.z_index = 10
 
 func _physics_process(delta: float) -> void:
 	if start:

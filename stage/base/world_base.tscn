@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bfdhgj3bwxnrh" path="res://assets/player/player.tscn" id="2_vrjms"]
 [ext_resource type="PackedScene" uid="uid://dx0iv3hpajmud" path="res://assets/tileset/tile_map.tscn" id="3_0g1f2"]
 [ext_resource type="PackedScene" uid="uid://67fp3fdutm0q" path="res://assets/stage/portal.tscn" id="4_bmfvk"]
-[ext_resource type="PackedScene" uid="uid://cmdwjwvngnxgq" path="res://effects/VFX/CRT.tscn" id="5_qdhbq"]
+[ext_resource type="PackedScene" uid="uid://dd45r3s3jbvmg" path="res://effects/VFX/CRT.tscn" id="5_qdhbq"]
 [ext_resource type="PackedScene" uid="uid://djxcmwhekrggy" path="res://assets/Spike/draw_spike.tscn" id="7_4t18i"]
 
 [node name="WorldBase" type="Node2D"]
