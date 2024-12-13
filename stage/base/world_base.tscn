@@ -17,6 +17,7 @@ script = ExtResource("1_5pc46")
 [node name="Portal" parent="." instance=ExtResource("4_bmfvk")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+metadata/_edit_lock_ = true
 
 [node name="CanvasLayer" parent="." instance=ExtResource("5_qdhbq")]
 offset = Vector2(320, 180)
