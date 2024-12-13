@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://b3cjiwvftuh4a"]
+[gd_scene load_steps=2 format=3 uid="uid://b3cjiwvftuh4a"]
+
+[ext_resource type="Theme" uid="uid://bgespdhrhpd1" path="res://themes/menu_theme.tres" id="1_xskib"]
 
 [node name="EndStage" type="Node2D"]
 
@@ -7,4 +9,5 @@ offset_left = 513.0
 offset_top = 302.0
 offset_right = 575.0
 offset_bottom = 338.0
+theme = ExtResource("1_xskib")
 text = "The end"
