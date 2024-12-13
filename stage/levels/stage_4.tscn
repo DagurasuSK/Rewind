@@ -12,7 +12,3 @@ position = Vector2(180, 90)
 
 [node name="draw_spike" parent="." index="5"]
 tile_map_data = PackedByteArray("AADz/wkAAAAAAAAAAQD0/wkAAAAAAAAAAQDy/wkAAAAAAAAAAQA=")
-
-[connection signal="body_entered" from="draw_spike/spike" to="draw_spike/spike" method="_on_body_entered"]
-[connection signal="body_entered" from="draw_spike/@Area2D@102787" to="draw_spike/@Area2D@102787" method="_on_body_entered"]
-[connection signal="body_entered" from="draw_spike/@Area2D@102788" to="draw_spike/@Area2D@102788" method="_on_body_entered"]
