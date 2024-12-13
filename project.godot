@@ -70,6 +70,7 @@ dash={
 2d_physics/layer_1="Stage"
 2d_physics/layer_2="Player"
 2d_physics/layer_3="Ghost"
+2d_physics/layer_4="Spike"
 
 [rendering]
 
@@ -78,3 +79,4 @@ renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 environment/defaults/default_clear_color=Color(0.408974, 0.441951, 0.915748, 1)
 viewport/transparent_background=true
+2d/snap/snap_2d_transforms_to_pixel=true

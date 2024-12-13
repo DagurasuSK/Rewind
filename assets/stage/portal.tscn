@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://67fp3fdutm0q"]
+[gd_scene load_steps=13 format=3 uid="uid://67fp3fdutm0q"]
 
 [ext_resource type="Script" path="res://assets/stage/portal_area.gd" id="1_c06cl"]
 
 [sub_resource type="Gradient" id="Gradient_7gcb1"]
-colors = PackedColorArray(1, 1, 1, 1, 0.159086, 0.63168, 0.362807, 1)
+offsets = PackedFloat32Array(0, 0.333333, 0.63522, 0.786164)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_ls7p0"]
 gradient = SubResource("Gradient_7gcb1")
@@ -17,7 +18,7 @@ point_count = 2
 curve = SubResource("Curve_g81tm")
 
 [sub_resource type="Curve" id="Curve_4s1x2"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.425926, 0.407767), 0.0, 0.0, 0, 0, Vector2(0.740741, 1), 0.0, 0.0, 0, 0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.317416, 0.683019), 0.0, 0.0, 0, 0, Vector2(0.740741, 1), 0.0, 0.0, 0, 0]
 point_count = 3
 
 [sub_resource type="CurveTexture" id="CurveTexture_xd75d"]
@@ -38,10 +39,17 @@ radial_velocity_max = -2.23517e-05
 gravity = Vector3(0, 0, 0)
 radial_accel_curve = SubResource("CurveTexture_j27ko")
 attractor_interaction_enabled = false
-scale_min = 0.35
-scale_max = 1.5
+scale_min = 2.0
+scale_max = 3.0
 scale_curve = SubResource("CurveTexture_xd75d")
 color_ramp = SubResource("GradientTexture1D_ls7p0")
+
+[sub_resource type="Curve" id="Curve_j8wug"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_dy0dp"]
+curve = SubResource("Curve_j8wug")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_d2q2d"]
 particle_flag_disable_z = true
@@ -51,7 +59,9 @@ emission_sphere_radius = 1.0
 orbit_velocity_min = -1.5
 orbit_velocity_max = 0.35
 gravity = Vector3(0, 0, 0)
-scale_min = 0.15
+scale_min = 2.0
+scale_max = 4.0
+scale_curve = SubResource("CurveTexture_dy0dp")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6h835"]
 size = Vector2(16, 18)

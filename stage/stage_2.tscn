@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=4 uid="uid://c4sj67qnbr80s"]
+[gd_scene load_steps=6 format=4 uid="uid://c4sj67qnbr80s"]
 
 [ext_resource type="Script" path="res://scripts/stage.gd" id="1_kcdyr"]
 [ext_resource type="PackedScene" uid="uid://dx0iv3hpajmud" path="res://Assets/tileset/tile_map.tscn" id="2_uyntc"]
 [ext_resource type="PackedScene" uid="uid://bfdhgj3bwxnrh" path="res://Assets/player/player.tscn" id="3_gt1lv"]
-[ext_resource type="PackedScene" uid="uid://67fp3fdutm0q" path="res://Assets/stage/portal.tscn" id="4_4nsrq"]
+[ext_resource type="PackedScene" uid="uid://67fp3fdutm0q" path="res://assets/stage/portal.tscn" id="4_4nsrq"]
+[ext_resource type="PackedScene" uid="uid://cmdwjwvngnxgq" path="res://effects/VFX/CRT.tscn" id="5_n0snt"]
 
 [node name="Stage1" type="Node2D"]
 script = ExtResource("1_kcdyr")
@@ -18,3 +19,7 @@ position = Vector2(-275, 143)
 
 [node name="Portal" parent="." instance=ExtResource("4_4nsrq")]
 position = Vector2(235, 138)
+
+[node name="CanvasLayer" parent="." instance=ExtResource("5_n0snt")]
+offset = Vector2(320, 180)
+transform = Transform2D(1, 0, 0, 1, 320, 180)

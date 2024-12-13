@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://djxcmwhekrggy"]
+
+[ext_resource type="PackedScene" uid="uid://tbua68w4ktpn" path="res://assets/Spike/spike.tscn" id="1_ensco"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_yrrpc"]
+scenes/1/scene = ExtResource("1_ensco")
+
+[sub_resource type="TileSet" id="TileSet_5l0bu"]
+sources/0 = SubResource("TileSetScenesCollectionSource_yrrpc")
+
+[node name="draw_spike" type="TileMapLayer"]
+tile_set = SubResource("TileSet_5l0bu")
