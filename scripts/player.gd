@@ -153,7 +153,7 @@ func _check_coyote_time(delta: float) -> void:
 		_can_jump = true
 		_can_wall_jump = true
 		
-	if Input.is_action_just_pressed("ui_accept") and _can_press_jump_button: # Caso o botão de pulo seja pressionado ativa o contador do coyote time
+	if Input.is_action_just_pressed("jump") and _can_press_jump_button: # Caso o botão de pulo seja pressionado ativa o contador do coyote time
 		_last_time_jump_pressed = COYOTE_TIME
 		_can_press_jump_button = false
 	
