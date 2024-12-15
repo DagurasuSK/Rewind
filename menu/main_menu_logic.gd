@@ -5,7 +5,7 @@ func _ready() -> void:
 
 func _on_new_game_button_pressed() -> void:
 	StageManager.go_to_next_stage()
-	Stopwatch.play()
+	Hud.play_stopwatch()
 
 func _on_options_button_pressed() -> void:
 	visible = false

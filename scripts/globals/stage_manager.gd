@@ -14,7 +14,7 @@ func go_to_next_stage() -> void:
 	# Se não houver próxima fase vai para a cena final
 	if stage_index > total_stages:
 		_go_to_end_stage()
-		Stopwatch.pause()
+		Hud.pause_stopwatch()
 		print("Aqui")
 		return
 	
@@ -45,6 +45,7 @@ func go_to_main_menu() -> void:
 func reload_stage() -> void:
 	get_tree().call_deferred("reload_current_scene")
 	PlayerPosition.clear_position()
+	Hud.add_death()
 
 # Alterna para a acena final
 func _go_to_end_stage() -> void:
