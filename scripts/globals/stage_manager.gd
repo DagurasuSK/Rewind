@@ -14,6 +14,7 @@ func go_to_next_stage() -> void:
 	# Se não houver próxima fase vai para a cena final
 	if stage_index > total_stages:
 		_go_to_end_stage()
+		Stopwatch.pause()
 		print("Aqui")
 		return
 	

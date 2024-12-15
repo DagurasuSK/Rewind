@@ -35,3 +35,4 @@ func play() -> void:
 
 func pause() -> void:
 	start = false
+	
