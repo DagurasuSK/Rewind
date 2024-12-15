@@ -14,28 +14,4 @@ tile_map_data = PackedByteArray("AADs/wYAAAAFAAIAAADt/wYAAAABAAAAAADu/wYAAAABAAA
 position = Vector2(-257, -17)
 
 [node name="draw_spike" parent="." index="5"]
-tile_map_data = PackedByteArray("AAD3/wAAAAAAAAAAAQD4/wAAAAAAAAAAAQAAAAAAAAAAAAAAAQD8/wAAAAAAAAAAAQD0/wcAAAAAAAAAAQD1/wcAAAAAAAAAAQD2/wcAAAAAAAAAAQD3/wcAAAAAAAAAAQD4/wcAAAAAAAAAAQD8/wcAAAAAAAAAAQD9/wcAAAAAAAAAAQD+/wcAAAAAAAAAAQD//wcAAAAAAAAAAQAAAAcAAAAAAAAAAQAIAAYAAAAAAAAAAQAJAAYAAAAAAAAAAQAKAAYAAAAAAAAAAQALAAYAAAAAAAAAAQAMAAYAAAAAAAAAAQAHAP//AAAAAAAAAQAIAP//AAAAAAAAAQAMAP//AAAAAAAAAQANAP//AAAAAAAAAQA=")
-
-[connection signal="body_entered" from="draw_spike/spike" to="draw_spike/spike" method="_on_body_entered"]
-[connection signal="body_entered" from="draw_spike/@Area2D@31055" to="draw_spike/@Area2D@31055" method="_on_body_entered"]
-[connection signal="body_entered" from="draw_spike/@Area2D@31056" to="draw_spike/@Area2D@31056" method="_on_body_entered"]
-[connection signal="body_entered" from="draw_spike/@Area2D@31057" to="draw_spike/@Area2D@31057" method="_on_body_entered"]
-[connection signal="body_entered" from="draw_spike/@Area2D@31058" to="draw_spike/@Area2D@31058" method="_on_body_entered"]
-[connection signal="body_entered" from="draw_spike/@Area2D@31059" to="draw_spike/@Area2D@31059" method="_on_body_entered"]
-[connection signal="body_entered" from="draw_spike/@Area2D@31060" to="draw_spike/@Area2D@31060" method="_on_body_entered"]
-[connection signal="body_entered" from="draw_spike/@Area2D@31061" to="draw_spike/@Area2D@31061" method="_on_body_entered"]
-[connection signal="body_entered" from="draw_spike/@Area2D@31062" to="draw_spike/@Area2D@31062" method="_on_body_entered"]
-[connection signal="body_entered" from="draw_spike/@Area2D@31063" to="draw_spike/@Area2D@31063" method="_on_body_entered"]
-[connection signal="body_entered" from="draw_spike/@Area2D@31064" to="draw_spike/@Area2D@31064" method="_on_body_entered"]
-[connection signal="body_entered" from="draw_spike/@Area2D@31065" to="draw_spike/@Area2D@31065" method="_on_body_entered"]
-[connection signal="body_entered" from="draw_spike/@Area2D@31066" to="draw_spike/@Area2D@31066" method="_on_body_entered"]
-[connection signal="body_entered" from="draw_spike/@Area2D@31067" to="draw_spike/@Area2D@31067" method="_on_body_entered"]
-[connection signal="body_entered" from="draw_spike/@Area2D@31068" to="draw_spike/@Area2D@31068" method="_on_body_entered"]
-[connection signal="body_entered" from="draw_spike/@Area2D@31069" to="draw_spike/@Area2D@31069" method="_on_body_entered"]
-[connection signal="body_entered" from="draw_spike/@Area2D@31070" to="draw_spike/@Area2D@31070" method="_on_body_entered"]
-[connection signal="body_entered" from="draw_spike/@Area2D@31071" to="draw_spike/@Area2D@31071" method="_on_body_entered"]
-[connection signal="body_entered" from="draw_spike/@Area2D@31072" to="draw_spike/@Area2D@31072" method="_on_body_entered"]
-[connection signal="body_entered" from="draw_spike/@Area2D@31073" to="draw_spike/@Area2D@31073" method="_on_body_entered"]
-[connection signal="body_entered" from="draw_spike/@Area2D@31074" to="draw_spike/@Area2D@31074" method="_on_body_entered"]
-[connection signal="body_entered" from="draw_spike/@Area2D@31075" to="draw_spike/@Area2D@31075" method="_on_body_entered"]
-[connection signal="body_entered" from="draw_spike/@Area2D@31076" to="draw_spike/@Area2D@31076" method="_on_body_entered"]
+tile_map_data = PackedByteArray("AAD3/wAAAAAAAAAAAQD4/wAAAAAAAAAAAQAAAAAAAAAAAAAAAQD8/wAAAAAAAAAAAQD0/wcAAAAAAAAAAQD1/wcAAAAAAAAAAQD2/wcAAAAAAAAAAQD3/wcAAAAAAAAAAQD4/wcAAAAAAAAAAQD8/wcAAAAAAAAAAQD9/wcAAAAAAAAAAQD+/wcAAAAAAAAAAQD//wcAAAAAAAAAAQAAAAcAAAAAAAAAAQAIAAYAAAAAAAAAAQAJAAYAAAAAAAAAAQAKAAYAAAAAAAAAAQALAAYAAAAAAAAAAQAMAAYAAAAAAAAAAQAHAP//AAAAAAAAAQAIAP//AAAAAAAAAQAMAP//AAAAAAAAAQANAP//AAAAAAAAAQD//wAAAAAAAAAAAQD+/wAAAAAAAAAAAQD9/wAAAAAAAAAAAQD2/wAAAAAAAAAAAQD1/wAAAAAAAAAAAQD0/wAAAAAAAAAAAQA=")
