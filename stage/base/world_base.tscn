@@ -13,6 +13,7 @@ script = ExtResource("1_5pc46")
 [node name="Player" parent="." instance=ExtResource("2_vrjms")]
 
 [node name="TileMapLayer" parent="." instance=ExtResource("3_0g1f2")]
+metadata/_edit_lock_ = true
 
 [node name="Portal" parent="." instance=ExtResource("4_bmfvk")]
 
@@ -24,3 +25,4 @@ offset = Vector2(320, 180)
 transform = Transform2D(1, 0, 0, 1, 320, 180)
 
 [node name="draw_spike" parent="." instance=ExtResource("7_4t18i")]
+metadata/_edit_lock_ = true
