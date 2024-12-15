@@ -9,6 +9,7 @@ shader = ExtResource("1_7xq3f")
 size = Vector2(640, 360)
 
 [node name="CanvasLayer" type="CanvasLayer"]
+visible = false
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
 material = SubResource("ShaderMaterial_c3ew6")
