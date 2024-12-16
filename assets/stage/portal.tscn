@@ -64,7 +64,7 @@ scale_max = 4.0
 scale_curve = SubResource("CurveTexture_dy0dp")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6h835"]
-size = Vector2(16, 18)
+size = Vector2(16, 30)
 
 [node name="Portal" type="Node2D"]
 

@@ -152,6 +152,7 @@ func _check_coyote_time(delta: float) -> void:
 		_can_press_jump_button = true
 		_can_jump = true
 		_can_wall_jump = true
+		_can_dash = true
 		
 	if Input.is_action_just_pressed("jump") and _can_press_jump_button: # Caso o botão de pulo seja pressionado ativa o contador do coyote time
 		_last_time_jump_pressed = COYOTE_TIME
@@ -171,9 +172,18 @@ func _apply_gravity(delta) -> void:
 func _jump() -> void:
 	velocity.y = JUMP_VELOCITY
 
-# Aplica o wall jumpd
+# Aplica o wall jump
 func _wall_jump() -> void:
-	var wall_normal = get_wall_normal()
+	var wall_normal
+	
+	# Se estiver colidindo com a parede o pulo vai ser na direção oposta a parede, caso
+	# contrário (por causa do coyote time, não estiver mais colidindo com a parede), o pulo
+	# vai na direção atual de movimento do personagem
+	if get_last_slide_collision():
+		wall_normal = get_wall_normal()
+	else:
+		wall_normal = Vector2(sign(velocity.x), 0)
+		
 	velocity.x = wall_normal.x * MAX_SPEED
 	velocity.y = JUMP_VELOCITY
 	_old_direction = wall_normal.x
