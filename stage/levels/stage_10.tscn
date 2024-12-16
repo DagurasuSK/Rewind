@@ -15,17 +15,3 @@ position = Vector2(296, -150)
 
 [node name="draw_spike" parent="." index="5"]
 tile_map_data = PackedByteArray("AAAPAAIAAAAAAAAAAQAOAAIAAAAAAAAAAQANAAIAAAAAAAAAAQAMAAIAAAAAAAAAAQALAAIAAAAAAAAAAQAKAAIAAAAAAAAAAQAJAAIAAAAAAAAAAQD1//z/AAAAAAAAAQD2//z/AAAAAAAAAQD3//z/AAAAAAAAAQD4//z/AAAAAAAAAQDz//z/AAAAAAAAAQD0//z/AAAAAAAAAQA=")
-
-[connection signal="body_entered" from="draw_spike/spike" to="draw_spike/spike" method="_on_body_entered"]
-[connection signal="body_entered" from="draw_spike/@Area2D@53902" to="draw_spike/@Area2D@53902" method="_on_body_entered"]
-[connection signal="body_entered" from="draw_spike/@Area2D@53903" to="draw_spike/@Area2D@53903" method="_on_body_entered"]
-[connection signal="body_entered" from="draw_spike/@Area2D@53904" to="draw_spike/@Area2D@53904" method="_on_body_entered"]
-[connection signal="body_entered" from="draw_spike/@Area2D@53905" to="draw_spike/@Area2D@53905" method="_on_body_entered"]
-[connection signal="body_entered" from="draw_spike/@Area2D@53906" to="draw_spike/@Area2D@53906" method="_on_body_entered"]
-[connection signal="body_entered" from="draw_spike/@Area2D@53907" to="draw_spike/@Area2D@53907" method="_on_body_entered"]
-[connection signal="body_entered" from="draw_spike/@Area2D@53908" to="draw_spike/@Area2D@53908" method="_on_body_entered"]
-[connection signal="body_entered" from="draw_spike/@Area2D@53909" to="draw_spike/@Area2D@53909" method="_on_body_entered"]
-[connection signal="body_entered" from="draw_spike/@Area2D@53910" to="draw_spike/@Area2D@53910" method="_on_body_entered"]
-[connection signal="body_entered" from="draw_spike/@Area2D@53911" to="draw_spike/@Area2D@53911" method="_on_body_entered"]
-[connection signal="body_entered" from="draw_spike/@Area2D@53912" to="draw_spike/@Area2D@53912" method="_on_body_entered"]
-[connection signal="body_entered" from="draw_spike/@Area2D@53913" to="draw_spike/@Area2D@53913" method="_on_body_entered"]

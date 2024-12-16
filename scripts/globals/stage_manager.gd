@@ -15,7 +15,6 @@ func go_to_next_stage() -> void:
 	if stage_index > total_stages:
 		_go_to_end_stage()
 		Hud.pause_stopwatch()
-		print("Aqui")
 		return
 	
 	go_to_specific_stage(stage_index)
