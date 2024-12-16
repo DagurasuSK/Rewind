@@ -21,5 +21,6 @@ position = Vector2(-275, 143)
 position = Vector2(235, 138)
 
 [node name="CanvasLayer" parent="." instance=ExtResource("5_asdnm")]
+visible = true
 offset = Vector2(320, 180)
 transform = Transform2D(1, 0, 0, 1, 320, 180)

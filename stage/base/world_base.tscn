@@ -21,6 +21,7 @@ metadata/_edit_lock_ = true
 metadata/_edit_lock_ = true
 
 [node name="CanvasLayer" parent="." instance=ExtResource("5_qdhbq")]
+visible = true
 offset = Vector2(320, 180)
 transform = Transform2D(1, 0, 0, 1, 320, 180)
 
