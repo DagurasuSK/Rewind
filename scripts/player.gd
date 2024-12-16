@@ -110,7 +110,7 @@ func _movement_air(delta) -> void: # Movimento horizontal do personagem no ar
 		if is_zero_approx(speed):
 			_old_direction = direction
 	
-	elif _old_direction == 0 and direction: # Se estava com o eixo x parado e começou a se mvoer no ar
+	elif _old_direction == 0 and direction: # Se estava com o eixo x parado e começou a se mover no ar
 		speed = SPEED_AIR * direction
 		_old_direction = direction
 		
@@ -198,6 +198,13 @@ func _handle_effects():
 		$WalkParticles.emitting = true
 	else:
 		$WalkParticles.emitting = false
+		
+	# Emite as particulas de wallslide 
+	if is_on_wall_only() and velocity.y > 0:
+		$WallSlideParticles.emitting = true
+		$WallSlideParticles.position.x = -sign(get_last_slide_collision().get_normal().x) * 6 # Normal da colisão da parede vezes a largura do sprite do personagem
+	else:
+		$WallSlideParticles.emitting = false
 		
 
 #region slowmotion

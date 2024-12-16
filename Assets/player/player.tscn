@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bfdhgj3bwxnrh"]
+[gd_scene load_steps=6 format=3 uid="uid://bfdhgj3bwxnrh"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_iqreu"]
 [ext_resource type="Texture2D" uid="uid://is4dsxt8dhto" path="res://assets/player/player.png" id="2_7onex"]
 [ext_resource type="PackedScene" uid="uid://c8gx6n4y4762v" path="res://effects/VFX/walk_particles.tscn" id="3_ce6ct"]
+[ext_resource type="PackedScene" uid="uid://bixepn3q13ydt" path="res://effects/VFX/wall_slide_particles.tscn" id="4_u4smm"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ubhuv"]
 radius = 6.0
@@ -20,3 +21,7 @@ shape = SubResource("CapsuleShape2D_ubhuv")
 
 [node name="WalkParticles" parent="." instance=ExtResource("3_ce6ct")]
 position = Vector2(0, 7)
+
+[node name="WallSlideParticles" parent="." instance=ExtResource("4_u4smm")]
+z_index = 1
+position = Vector2(6, 0)
