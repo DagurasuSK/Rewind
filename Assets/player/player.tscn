@@ -3,10 +3,10 @@
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_iqreu"]
 [ext_resource type="Texture2D" uid="uid://is4dsxt8dhto" path="res://assets/player/player.png" id="2_7onex"]
 [ext_resource type="PackedScene" uid="uid://c8gx6n4y4762v" path="res://effects/VFX/walk_particles.tscn" id="3_ce6ct"]
-[ext_resource type="PackedScene" path="res://effects/VFX/wall_slide_particles.tscn" id="4_u4smm"]
+[ext_resource type="PackedScene" uid="uid://bixepn3q13ydt" path="res://effects/VFX/wall_slide_particles.tscn" id="4_u4smm"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ubhuv"]
-radius = 5.0
+radius = 6.0
 height = 16.0
 
 [node name="Player" type="CharacterBody2D"]
