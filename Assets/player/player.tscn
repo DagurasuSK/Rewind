@@ -4,8 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://is4dsxt8dhto" path="res://assets/player/player.png" id="2_7onex"]
 [ext_resource type="PackedScene" uid="uid://c8gx6n4y4762v" path="res://effects/VFX/walk_particles.tscn" id="3_ce6ct"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_a2m7q"]
-size = Vector2(12, 16)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ubhuv"]
+radius = 6.0
+height = 16.0
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
@@ -15,7 +16,7 @@ script = ExtResource("1_iqreu")
 texture = ExtResource("2_7onex")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_a2m7q")
+shape = SubResource("CapsuleShape2D_ubhuv")
 
 [node name="WalkParticles" parent="." instance=ExtResource("3_ce6ct")]
 position = Vector2(0, 7)
