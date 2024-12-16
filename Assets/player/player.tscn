@@ -1,9 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://bfdhgj3bwxnrh"]
+[gd_scene load_steps=8 format=3 uid="uid://bfdhgj3bwxnrh"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_iqreu"]
 [ext_resource type="Texture2D" uid="uid://is4dsxt8dhto" path="res://assets/player/player.png" id="2_7onex"]
 [ext_resource type="PackedScene" uid="uid://c8gx6n4y4762v" path="res://effects/VFX/walk_particles.tscn" id="3_ce6ct"]
-[ext_resource type="PackedScene" uid="uid://bixepn3q13ydt" path="res://effects/VFX/wall_slide_particles.tscn" id="4_u4smm"]
+[ext_resource type="Script" path="res://scripts/trail.gd" id="3_jmksk"]
+[ext_resource type="PackedScene" path="res://effects/VFX/wall_slide_particles.tscn" id="4_u4smm"]
+
+[sub_resource type="Curve" id="Curve_5qtku"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ubhuv"]
 radius = 6.0
@@ -15,6 +20,27 @@ script = ExtResource("1_iqreu")
 
 [node name="Icon" type="Sprite2D" parent="."]
 texture = ExtResource("2_7onex")
+
+[node name="purple_line" type="Line2D" parent="Icon"]
+top_level = true
+position = Vector2(-1, 1)
+width = 2.0
+width_curve = SubResource("Curve_5qtku")
+default_color = Color(0.486275, 0.0352941, 0.839216, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+script = ExtResource("3_jmksk")
+
+[node name="green_line" type="Line2D" parent="Icon"]
+top_level = true
+width = 2.0
+width_curve = SubResource("Curve_5qtku")
+default_color = Color(6.85863e-07, 0.429476, 0.201818, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+script = ExtResource("3_jmksk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_ubhuv")
