@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c8gx6n4y4762v" path="res://effects/VFX/walk_particles.tscn" id="3_ce6ct"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ubhuv"]
-radius = 6.0
+radius = 5.0
 height = 16.0
 
 [node name="Player" type="CharacterBody2D"]
