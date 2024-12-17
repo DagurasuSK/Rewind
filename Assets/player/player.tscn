@@ -1,10 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://bfdhgj3bwxnrh"]
+[gd_scene load_steps=14 format=3 uid="uid://bfdhgj3bwxnrh"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_iqreu"]
 [ext_resource type="Texture2D" uid="uid://is4dsxt8dhto" path="res://assets/player/player.png" id="2_7onex"]
 [ext_resource type="PackedScene" uid="uid://c8gx6n4y4762v" path="res://effects/VFX/walk_particles.tscn" id="3_ce6ct"]
 [ext_resource type="Script" path="res://scripts/trail.gd" id="3_jmksk"]
 [ext_resource type="PackedScene" path="res://effects/VFX/wall_slide_particles.tscn" id="4_u4smm"]
+[ext_resource type="AudioStream" uid="uid://dcs21i1pa6m1l" path="res://effects/SFX/Walk.wav" id="6_s0orb"]
+[ext_resource type="AudioStream" uid="uid://tc100w5va8p8" path="res://effects/SFX/jump/Jump1.wav" id="7_a3yy2"]
+[ext_resource type="AudioStream" uid="uid://d0me1epj723de" path="res://effects/SFX/jump/Jump2.wav" id="8_8vrv2"]
+[ext_resource type="AudioStream" uid="uid://kwvje1b37ctj" path="res://effects/SFX/jump/Jump3.wav" id="9_16uuf"]
+[ext_resource type="AudioStream" uid="uid://c2dxh45p1khbq" path="res://effects/SFX/jump/Jump4.wav" id="10_w4tl3"]
 
 [sub_resource type="Curve" id="Curve_5qtku"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
@@ -13,6 +18,13 @@ point_count = 2
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ubhuv"]
 radius = 6.0
 height = 16.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_d0l47"]
+streams_count = 4
+stream_0/stream = ExtResource("7_a3yy2")
+stream_1/stream = ExtResource("8_8vrv2")
+stream_2/stream = ExtResource("9_16uuf")
+stream_3/stream = ExtResource("10_w4tl3")
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
@@ -51,3 +63,12 @@ position = Vector2(0, 7)
 [node name="WallSlideParticles" parent="." instance=ExtResource("4_u4smm")]
 z_index = 1
 position = Vector2(6, 0)
+
+[node name="WalkSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_s0orb")
+volume_db = -11.143
+max_distance = 1000.0
+
+[node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamRandomizer_d0l47")
+volume_db = -20.0

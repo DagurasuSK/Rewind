@@ -7,11 +7,12 @@ func _process(delta: float) -> void:
 	add_point(get_parent().global_position)
 	if points.size() > MAX_POINTS:
 		remove_point(0)
-	disable_trail()
+	#disable_trail()
 
-
+"""
 func disable_trail():
 	if not player.is_on_wall() and not player.is_on_floor():
 		self.visible = false
 	else:
 		self.visible = true
+"""

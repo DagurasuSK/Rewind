@@ -44,6 +44,7 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	_handle_effects()
+	
 
 func _physics_process(delta: float) -> void:
 	_movement(delta)
@@ -52,6 +53,8 @@ func _physics_process(delta: float) -> void:
 	_update_current_input(delta)
 	move_and_slide()
 	set_world_limit()
+	
+	sounds()
 
 func set_world_limit() -> void:
 	if position.y > world_limit.y:
@@ -131,11 +134,13 @@ func _movement_vertical(delta) -> void:
 	if _last_time_jump_pressed > 0:
 		if _can_wall_jump:
 			_wall_jump()
+			$JumpSound.play()
 			_can_wall_jump = false
 			_last_time_jump_pressed = 0
 			
 		if _can_jump:
 			_jump()
+			$JumpSound.play()
 			_can_jump = false
 			_last_time_jump_pressed = 0
 			_can_press_jump_button = true
@@ -228,3 +233,14 @@ func _handle_slowMotion():
 		Engine.time_scale = lerp(Engine.time_scale, GAME_DEFAULT_SPEED,  0.5)
 		#Engine.time_scale = GAME_DEFAULT_SPEED
 #endregion
+
+#region audio manager
+func sounds():
+	if self.is_on_floor_only() and velocity.x != 0:
+		if not $WalkSound.playing:
+			$WalkSound.play()
+	else:
+		$WalkSound.stop()
+	"""if Input.is_action_just_pressed("jump") and velocity.y > 0:
+		$JumpSound.play()"""
+		#endregion
