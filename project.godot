@@ -21,6 +21,7 @@ config/icon="res://icon.svg"
 PlayerPosition="*res://scripts/globals/player_position.gd"
 StageManager="*res://scripts/globals/stage_manager.gd"
 Hud="*res://scripts/globals/hud.gd"
+MusicManager="*res://scripts/globals/music_manager.gd"
 
 [display]
 

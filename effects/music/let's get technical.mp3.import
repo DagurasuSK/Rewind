@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bca0sr1umgnkw"
+path="res://.godot/imported/let's get technical.mp3-bb39e10e33ce8756ce7c00f169f0f817.mp3str"
+
+[deps]
+
+source_file="res://effects/music/let's get technical.mp3"
+dest_files=["res://.godot/imported/let's get technical.mp3-bb39e10e33ce8756ce7c00f169f0f817.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

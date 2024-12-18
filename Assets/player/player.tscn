@@ -69,7 +69,9 @@ position = Vector2(6, 0)
 stream = ExtResource("6_s0orb")
 volume_db = -11.143
 max_distance = 1000.0
+bus = &"SFX"
 
 [node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
 stream = SubResource("AudioStreamRandomizer_d0l47")
 volume_db = -20.0
+bus = &"SFX"
