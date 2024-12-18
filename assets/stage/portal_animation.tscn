@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://l58ckiomfex4"]
+
+[ext_resource type="Texture2D" uid="uid://lpllec4miv5" path="res://assets/stage/portal.png" id="1_j3qx4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v70h8"]
+atlas = ExtResource("1_j3qx4")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vcya4"]
+atlas = ExtResource("1_j3qx4")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ok78a"]
+atlas = ExtResource("1_j3qx4")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yqcyd"]
+atlas = ExtResource("1_j3qx4")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b1s3x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v70h8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vcya4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ok78a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yqcyd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ok78a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vcya4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_b1s3x")
+autoplay = "default"
+frame_progress = 0.348101
