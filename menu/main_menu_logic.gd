@@ -1,12 +1,12 @@
 extends Control
 
 func _ready() -> void:
-	pass # Replace with function body.
+	MusicManager.play_menu_music()
 
 func _on_new_game_button_pressed() -> void:
 	StageManager.go_to_next_stage()
 	Hud.play_stopwatch()
-	MusicManager.play()
+	MusicManager.play_gameplay_music()
 
 func _on_options_button_pressed() -> void:
 	visible = false

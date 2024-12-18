@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://is4dsxt8dhto" path="res://assets/player/player.png" id="2_7onex"]
 [ext_resource type="PackedScene" uid="uid://c8gx6n4y4762v" path="res://effects/VFX/walk_particles.tscn" id="3_ce6ct"]
 [ext_resource type="Script" path="res://scripts/trail.gd" id="3_jmksk"]
-[ext_resource type="PackedScene" path="res://effects/VFX/wall_slide_particles.tscn" id="4_u4smm"]
+[ext_resource type="PackedScene" uid="uid://bixepn3q13ydt" path="res://effects/VFX/wall_slide_particles.tscn" id="4_u4smm"]
 [ext_resource type="AudioStream" uid="uid://dcs21i1pa6m1l" path="res://effects/SFX/Walk.wav" id="6_s0orb"]
 [ext_resource type="AudioStream" uid="uid://tc100w5va8p8" path="res://effects/SFX/jump/Jump1.wav" id="7_a3yy2"]
 [ext_resource type="AudioStream" uid="uid://d0me1epj723de" path="res://effects/SFX/jump/Jump2.wav" id="8_8vrv2"]
