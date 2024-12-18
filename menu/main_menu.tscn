@@ -56,7 +56,6 @@ text = "Quit"
 
 [node name="OptionsContainer" type="VBoxContainer" parent="."]
 unique_name_in_owner = true
-visible = false
 layout_mode = 2
 offset_left = 241.0
 offset_top = 104.0
@@ -77,9 +76,9 @@ text = "Music
 [node name="MusicSlider" type="HSlider" parent="OptionsContainer/MusicVolume"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-max_value = 0.4
+max_value = 0.14
 step = 0.001
-value = 0.1
+value = 0.07
 
 [node name="SfxVolume" type="HBoxContainer" parent="OptionsContainer"]
 layout_mode = 2
@@ -137,8 +136,8 @@ text = "Back"
 [connection signal="pressed" from="MainMenuContainer/OptionsButton" to="MainMenuContainer" method="_on_options_button_pressed"]
 [connection signal="pressed" from="MainMenuContainer/CreditsButton" to="MainMenuContainer" method="_on_credits_button_pressed"]
 [connection signal="pressed" from="MainMenuContainer/QuitButton" to="MainMenuContainer" method="_on_quit_button_pressed"]
-[connection signal="value_changed" from="OptionsContainer/MusicVolume/MusicSlider" to="OptionsContainer" method="_on_h_slider_value_changed"]
 [connection signal="value_changed" from="OptionsContainer/MusicVolume/MusicSlider" to="OptionsContainer" method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="OptionsContainer/MusicVolume/MusicSlider" to="OptionsContainer" method="_on_h_slider_value_changed"]
 [connection signal="value_changed" from="OptionsContainer/SfxVolume/SfxSlider" to="OptionsContainer" method="_on_sfx_slider_value_changed"]
 [connection signal="toggled" from="OptionsContainer/FullscreenContainer/CheckButton" to="OptionsContainer" method="_on_check_button_toggled"]
 [connection signal="pressed" from="OptionsContainer/BackButton" to="OptionsContainer" method="_on_back_button_pressed"]

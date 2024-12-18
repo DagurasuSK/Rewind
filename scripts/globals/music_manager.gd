@@ -15,5 +15,6 @@ func play_menu_music() -> void:
 func play_gameplay_music() -> void:
 	stream = load(_gameplay_music_path)
 	stream.loop = true
+	volume_db = -30
 	play()
 	
