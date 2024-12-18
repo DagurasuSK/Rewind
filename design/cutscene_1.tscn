@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dcdcfvdk0s1kr"]
+
+[ext_resource type="VideoStream" path="res://design/RewindCUTSCENE1.ogv" id="1_2fryo"]
+
+[node name="cutscene1" type="VideoStreamPlayer"]
+stream = ExtResource("1_2fryo")
+autoplay = true
+buffering_msec = 1000
