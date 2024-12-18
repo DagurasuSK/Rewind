@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://e0ndsfid0wtf"]
+[gd_scene load_steps=6 format=3 uid="uid://e0ndsfid0wtf"]
 
 [ext_resource type="Theme" uid="uid://bgespdhrhpd1" path="res://themes/menu_theme.tres" id="1_0buon"]
 [ext_resource type="Script" path="res://menu/main_menu_logic.gd" id="1_phfwy"]
 [ext_resource type="Script" path="res://menu/options_menu_logic.gd" id="2_h8yve"]
+[ext_resource type="Texture2D" uid="uid://diw51t83shget" path="res://design/credits.png" id="5_cn0db"]
 [ext_resource type="VideoStream" path="res://Assets/menu/icons/Rewind.ogv" id="7_oklkj"]
 
 [node name="MainMenu" type="Control"]
@@ -43,6 +44,11 @@ text = "New Game"
 [node name="OptionsButton" type="Button" parent="MainMenuContainer"]
 layout_mode = 2
 text = "Options"
+
+[node name="CreditsButton" type="Button" parent="MainMenuContainer"]
+layout_mode = 2
+text = "Credits
+"
 
 [node name="QuitButton" type="Button" parent="MainMenuContainer"]
 layout_mode = 2
@@ -105,11 +111,35 @@ layout_mode = 2
 layout_mode = 2
 text = "Back"
 
+[node name="CreditsNode" type="Control" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="CreditsNode"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("5_cn0db")
+
+[node name="BackButton" type="Button" parent="CreditsNode"]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 331.0
+offset_right = 625.0
+offset_bottom = 351.0
+text = "Back"
+
 [connection signal="pressed" from="MainMenuContainer/NewGameButton" to="MainMenuContainer" method="_on_new_game_button_pressed"]
 [connection signal="pressed" from="MainMenuContainer/OptionsButton" to="MainMenuContainer" method="_on_options_button_pressed"]
+[connection signal="pressed" from="MainMenuContainer/CreditsButton" to="MainMenuContainer" method="_on_credits_button_pressed"]
 [connection signal="pressed" from="MainMenuContainer/QuitButton" to="MainMenuContainer" method="_on_quit_button_pressed"]
 [connection signal="value_changed" from="OptionsContainer/MusicVolume/MusicSlider" to="OptionsContainer" method="_on_h_slider_value_changed"]
 [connection signal="value_changed" from="OptionsContainer/MusicVolume/MusicSlider" to="OptionsContainer" method="_on_music_slider_value_changed"]
 [connection signal="value_changed" from="OptionsContainer/SfxVolume/SfxSlider" to="OptionsContainer" method="_on_sfx_slider_value_changed"]
 [connection signal="toggled" from="OptionsContainer/FullscreenContainer/CheckButton" to="OptionsContainer" method="_on_check_button_toggled"]
 [connection signal="pressed" from="OptionsContainer/BackButton" to="OptionsContainer" method="_on_back_button_pressed"]
+[connection signal="pressed" from="CreditsNode/BackButton" to="MainMenuContainer" method="_on_back_button_pressed"]
