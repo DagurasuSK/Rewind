@@ -7,6 +7,11 @@ var stage_index: int = 0 # Indíce da fase atual
 var total_stages: int = DirAccess.open("res://stage/levels").get_files().size() # Total de fases
 var current_stage: Node # Referência da fase atual
 
+
+func go_to_first_stage() -> void:
+	stage_index = 1
+	go_to_specific_stage(stage_index)
+
 # Alterna para a próxima fase
 func go_to_next_stage() -> void:
 	stage_index += 1
@@ -30,8 +35,6 @@ func go_to_specific_stage(stage_number: int) -> void:
 	
 	PlayerPosition.call_deferred("clear_position")
 
-func go_to_first_stage() -> void:
-	pass
 
 func go_to_main_menu() -> void:
 	if current_stage:
