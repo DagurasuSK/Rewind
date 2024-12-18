@@ -107,8 +107,7 @@ func _movement_ground(delta) -> void: # Movimento horizontal do personagem no ch
 		speed = lerpf(speed, MAX_SPEED * direction, HORIZONTAL_ACCELERATION * delta)
 	else:
 		speed = move_toward(speed, 0, 5)
-		print(speed)
-	
+
 	_old_direction = direction
 	velocity.x = speed
 	
