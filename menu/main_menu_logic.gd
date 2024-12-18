@@ -4,9 +4,12 @@ func _ready() -> void:
 	MusicManager.play_menu_music()
 
 func _on_new_game_button_pressed() -> void:
-	StageManager.go_to_next_stage()
-	Hud.play_stopwatch()
-	MusicManager.play_gameplay_music()
+	get_tree().change_scene_to_file("res://design/cutscene_1.tscn")
+	MusicManager.stop()
+	#get_tree().call_deferred("change_scene_to_file", "res://design/RewindCUTSCENE1.ogv")
+	#StageManager.go_to_next_stage()
+	#Hud.play_stopwatch()
+	#MusicManager.play_gameplay_music()
 
 func _on_options_button_pressed() -> void:
 	visible = false
