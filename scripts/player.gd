@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+class_name Player
 const HORIZONTAL_ACCELERATION := 5.0 # Aceleração horizontal
 const SPEED_AIR := 75.0 # Velocidade horizontal no ar
 const MAX_SPEED := 150.0 # Velocidade máxima
