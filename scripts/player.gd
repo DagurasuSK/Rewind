@@ -101,7 +101,13 @@ func _movement_horizontal(delta) -> void:
 	
 func _movement_ground(delta) -> void: # Movimento horizontal do personagem no chão
 	var direction := Input.get_axis("left", "right")
-	speed = lerpf(speed, MAX_SPEED * direction, HORIZONTAL_ACCELERATION * delta)
+	
+	if direction:
+		speed = lerpf(speed, MAX_SPEED * direction, HORIZONTAL_ACCELERATION * delta)
+	else:
+		speed = move_toward(speed, 0, 5)
+		print(speed)
+	
 	_old_direction = direction
 	velocity.x = speed
 	
@@ -118,7 +124,7 @@ func _movement_air(delta) -> void: # Movimento horizontal do personagem no ar
 		_old_direction = direction
 		
 	else: # Se _old_direction é igual a direction
-		speed = move_toward(speed, SPEED_AIR * direction, 10 * delta)
+		speed = move_toward(speed, SPEED_AIR * direction, 5 * delta)
 	velocity.x = speed
 
 #endregion
