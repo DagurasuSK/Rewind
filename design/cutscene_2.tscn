@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://colr8pofj1scd"]
+
+[ext_resource type="VideoStream" path="res://design/RewindCUTSCENE2.ogv" id="1_lhwoe"]
+[ext_resource type="Script" path="res://scripts/cutscene2.gd" id="2_x224k"]
+
+[node name="cutscene2" type="VideoStreamPlayer"]
+stream = ExtResource("1_lhwoe")
+autoplay = true
+bus = &"Music"
+script = ExtResource("2_x224k")
+
+[connection signal="finished" from="." to="." method="_on_finished"]
