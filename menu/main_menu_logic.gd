@@ -22,7 +22,6 @@ func _on_quit_button_pressed() -> void:
 func _on_credits_button_pressed() -> void:
 	%CreditsNode.visible = true
 
-
 func _on_back_button_pressed() -> void:
 	%CreditsNode.visible = false
 	

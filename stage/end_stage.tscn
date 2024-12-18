@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://b3cjiwvftuh4a"]
+[gd_scene load_steps=5 format=3 uid="uid://b3cjiwvftuh4a"]
 
 [ext_resource type="Texture2D" uid="uid://nygpx05rc6sn" path="res://assets/menu/wallpaper/ryan_happy.jpg" id="1_nwq5p"]
 [ext_resource type="Theme" uid="uid://bgespdhrhpd1" path="res://themes/menu_theme.tres" id="1_xskib"]
+[ext_resource type="Script" path="res://scripts/score.gd" id="3_66lwn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gy5kx"]
+bg_color = Color(0.121569, 0.121569, 0.121569, 0.827451)
 
 [node name="EndStage" type="Node2D"]
 
@@ -27,3 +31,21 @@ size_flags_vertical = 1
 theme = ExtResource("1_xskib")
 theme_override_font_sizes/font_size = 58
 text = "The end."
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+offset_left = 494.0
+offset_top = 231.0
+offset_right = 534.0
+offset_bottom = 271.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_gy5kx")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="ScoreLabel" type="Label" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+script = ExtResource("3_66lwn")

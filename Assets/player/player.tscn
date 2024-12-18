@@ -36,8 +36,9 @@ texture = ExtResource("2_7onex")
 
 [node name="purple_line" type="Line2D" parent="Icon"]
 top_level = true
+z_index = -1
 position = Vector2(-1, 1)
-width = 2.0
+width = 4.0
 width_curve = SubResource("Curve_5qtku")
 default_color = Color(0.486275, 0.0352941, 0.839216, 1)
 joint_mode = 2
@@ -47,7 +48,8 @@ script = ExtResource("3_jmksk")
 
 [node name="green_line" type="Line2D" parent="Icon"]
 top_level = true
-width = 2.0
+z_index = -1
+width = 4.0
 width_curve = SubResource("Curve_5qtku")
 default_color = Color(6.85863e-07, 0.429476, 0.201818, 1)
 joint_mode = 2

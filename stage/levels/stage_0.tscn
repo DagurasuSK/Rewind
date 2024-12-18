@@ -12,9 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://ocho2hcdaxbr" path="res://assets/props/Hanna2.png" id="9_b118m"]
 [ext_resource type="Texture2D" uid="uid://s86e2hqsggx6" path="res://assets/props/MachineProblem.png" id="9_bfwww"]
 [ext_resource type="PackedScene" uid="uid://dx0iv3hpajmud" path="res://assets/tileset/tile_map.tscn" id="10_bkskd"]
-[ext_resource type="PackedScene" uid="uid://6ndqi6p67cxn" path="res://assets/tileset/secret_area.tscn" id="10_im3b3"]
+[ext_resource type="PackedScene" path="res://assets/tileset/secret_area.tscn" id="10_im3b3"]
 [ext_resource type="PackedScene" uid="uid://67fp3fdutm0q" path="res://assets/stage/portal.tscn" id="11_b6chy"]
-[ext_resource type="PackedScene" uid="uid://dy4ddvg505dbf" path="res://assets/stage/portal_animation.tscn" id="11_nq528"]
+[ext_resource type="PackedScene" uid="uid://l58ckiomfex4" path="res://assets/stage/portal_animation.tscn" id="11_nq528"]
 [ext_resource type="PackedScene" uid="uid://dd45r3s3jbvmg" path="res://effects/VFX/CRT.tscn" id="13_r4fwe"]
 [ext_resource type="PackedScene" uid="uid://djxcmwhekrggy" path="res://assets/Spike/draw_spike.tscn" id="14_faope"]
 

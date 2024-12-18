@@ -3,7 +3,7 @@ extends Line2D
 
 const MAX_POINTS :int = 30
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	add_point(get_parent().global_position)
 	if points.size() > MAX_POINTS:
 		remove_point(0)

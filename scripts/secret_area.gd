@@ -9,7 +9,7 @@ func _ready() :
 	assert(collision != null)
 	
 
-func _process(delta):
+func _process(_delta):
 	collision.set_deferred("disabled",false) if exitedArea else collision.set_deferred("disabled",true)
 
 func _on_detector_body_entered(body):

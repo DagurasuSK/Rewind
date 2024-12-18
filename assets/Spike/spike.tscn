@@ -7,7 +7,7 @@
 size = Vector2(10, 8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_re54o"]
-size = Vector2(16, 10)
+size = Vector2(16, 13)
 
 [node name="spike" type="Area2D"]
 collision_layer = 8
@@ -25,7 +25,7 @@ shape = SubResource("RectangleShape2D_efkg2")
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0, 3)
+position = Vector2(0, 1.5)
 shape = SubResource("RectangleShape2D_re54o")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
