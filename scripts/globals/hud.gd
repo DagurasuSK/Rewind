@@ -40,3 +40,6 @@ func pause_stopwatch() -> void:
 	
 func add_death() -> void:
 	death_count += 1
+
+func hide():
+	label.visible = false

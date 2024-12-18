@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://menu/main_menu_logic.gd" id="1_phfwy"]
 [ext_resource type="Script" path="res://menu/options_menu_logic.gd" id="2_h8yve"]
 [ext_resource type="Texture2D" uid="uid://diw51t83shget" path="res://design/credits.png" id="5_cn0db"]
-[ext_resource type="VideoStream" path="res://Assets/menu/icons/Rewind.ogv" id="7_oklkj"]
+[ext_resource type="VideoStream" path="res://assets/menu/icons/Rewind.ogv" id="7_oklkj"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -51,6 +51,7 @@ text = "Credits
 "
 
 [node name="QuitButton" type="Button" parent="MainMenuContainer"]
+visible = false
 layout_mode = 2
 text = "Quit"
 
@@ -137,8 +138,8 @@ text = "Back"
 [connection signal="pressed" from="MainMenuContainer/OptionsButton" to="MainMenuContainer" method="_on_options_button_pressed"]
 [connection signal="pressed" from="MainMenuContainer/CreditsButton" to="MainMenuContainer" method="_on_credits_button_pressed"]
 [connection signal="pressed" from="MainMenuContainer/QuitButton" to="MainMenuContainer" method="_on_quit_button_pressed"]
-[connection signal="value_changed" from="OptionsContainer/MusicVolume/MusicSlider" to="OptionsContainer" method="_on_h_slider_value_changed"]
 [connection signal="value_changed" from="OptionsContainer/MusicVolume/MusicSlider" to="OptionsContainer" method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="OptionsContainer/MusicVolume/MusicSlider" to="OptionsContainer" method="_on_h_slider_value_changed"]
 [connection signal="value_changed" from="OptionsContainer/SfxVolume/SfxSlider" to="OptionsContainer" method="_on_sfx_slider_value_changed"]
 [connection signal="toggled" from="OptionsContainer/FullscreenContainer/CheckButton" to="OptionsContainer" method="_on_check_button_toggled"]
 [connection signal="pressed" from="OptionsContainer/BackButton" to="OptionsContainer" method="_on_back_button_pressed"]
