@@ -43,3 +43,7 @@ func add_death() -> void:
 
 func hide():
 	label.visible = false
+
+func reset_progress():
+	time_passed = 0.0
+	death_count = 0

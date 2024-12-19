@@ -8,3 +8,4 @@ func _on_body_entered(_body: Node2D) -> void:
 	Hud.play_stopwatch()
 	MusicManager.play_gameplay_music()
 	StageManager.go_to_first_stage()
+	Hud.reset_progress()
