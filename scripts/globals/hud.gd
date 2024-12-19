@@ -45,5 +45,6 @@ func hide():
 	label.visible = false
 
 func reset_progress():
+	label.visible = true
 	time_passed = 0.0
 	death_count = 0
