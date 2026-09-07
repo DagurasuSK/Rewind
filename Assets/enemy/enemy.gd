@@ -1,4 +1,4 @@
-class_name Enemy
+class_name enemy
 extends CharacterBody2D
 
 var _position_index: int = 0  # Índice da posição atual

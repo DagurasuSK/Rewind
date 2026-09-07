@@ -1,22 +1,22 @@
 [gd_scene load_steps=19 format=4 uid="uid://dl4xb0q64q5mw"]
 
 [ext_resource type="Script" path="res://scripts/start_adventure.gd" id="2_a6xb8"]
-[ext_resource type="Texture2D" uid="uid://21igprvugp3k" path="res://assets/props/computer.png" id="2_o3pst"]
-[ext_resource type="Texture2D" uid="uid://dvf7j0edrsyi6" path="res://assets/props/plants.png" id="3_i4di6"]
-[ext_resource type="Texture2D" uid="uid://bs8fstp34v0pu" path="res://assets/props/warDrop.png" id="4_u1ad4"]
-[ext_resource type="Texture2D" uid="uid://c3ebhx0pci4ff" path="res://assets/props/warDrop3.png" id="5_qt41r"]
-[ext_resource type="Texture2D" uid="uid://4k15rfftiw63" path="res://assets/props/warDrop2.png" id="6_jksqn"]
-[ext_resource type="Texture2D" uid="uid://doipf3p1i4rla" path="res://assets/props/warning.png" id="7_3y12r"]
-[ext_resource type="Texture2D" uid="uid://bfbfdr33ebrst" path="res://assets/props/ad.png" id="8_1uddu"]
-[ext_resource type="PackedScene" uid="uid://bfdhgj3bwxnrh" path="res://assets/player/player.tscn" id="9_7xpvg"]
-[ext_resource type="Texture2D" uid="uid://ocho2hcdaxbr" path="res://assets/props/Hanna2.png" id="9_b118m"]
-[ext_resource type="Texture2D" uid="uid://s86e2hqsggx6" path="res://assets/props/MachineProblem.png" id="9_bfwww"]
-[ext_resource type="PackedScene" uid="uid://dx0iv3hpajmud" path="res://assets/tileset/tile_map.tscn" id="10_bkskd"]
-[ext_resource type="PackedScene" uid="uid://6ndqi6p67cxn" path="res://assets/tileset/secret_area.tscn" id="10_im3b3"]
-[ext_resource type="PackedScene" uid="uid://67fp3fdutm0q" path="res://assets/stage/portal.tscn" id="11_b6chy"]
-[ext_resource type="PackedScene" uid="uid://l58ckiomfex4" path="res://assets/stage/portal_animation.tscn" id="11_nq528"]
+[ext_resource type="Texture2D" uid="uid://21igprvugp3k" path="res://Assets/props/computer.png" id="2_o3pst"]
+[ext_resource type="Texture2D" uid="uid://dvf7j0edrsyi6" path="res://Assets/props/plants.png" id="3_i4di6"]
+[ext_resource type="Texture2D" uid="uid://bs8fstp34v0pu" path="res://Assets/props/warDrop.png" id="4_u1ad4"]
+[ext_resource type="Texture2D" uid="uid://c3ebhx0pci4ff" path="res://Assets/props/warDrop3.png" id="5_qt41r"]
+[ext_resource type="Texture2D" uid="uid://4k15rfftiw63" path="res://Assets/props/warDrop2.png" id="6_jksqn"]
+[ext_resource type="Texture2D" uid="uid://doipf3p1i4rla" path="res://Assets/props/warning.png" id="7_3y12r"]
+[ext_resource type="Texture2D" uid="uid://bfbfdr33ebrst" path="res://Assets/props/ad.png" id="8_1uddu"]
+[ext_resource type="PackedScene" uid="uid://bfdhgj3bwxnrh" path="res://Assets/player/player.tscn" id="9_7xpvg"]
+[ext_resource type="Texture2D" uid="uid://ocho2hcdaxbr" path="res://Assets/props/Hanna2.png" id="9_b118m"]
+[ext_resource type="Texture2D" uid="uid://s86e2hqsggx6" path="res://Assets/props/MachineProblem.png" id="9_bfwww"]
+[ext_resource type="PackedScene" uid="uid://dx0iv3hpajmud" path="res://Assets/tileset/tile_map.tscn" id="10_bkskd"]
+[ext_resource type="PackedScene" uid="uid://6ndqi6p67cxn" path="res://Assets/tileset/secret_area.tscn" id="10_im3b3"]
+[ext_resource type="PackedScene" uid="uid://67fp3fdutm0q" path="res://Assets/stage/portal.tscn" id="11_b6chy"]
+[ext_resource type="PackedScene" uid="uid://l58ckiomfex4" path="res://Assets/stage/portal_animation.tscn" id="11_nq528"]
 [ext_resource type="PackedScene" uid="uid://dd45r3s3jbvmg" path="res://effects/VFX/CRT.tscn" id="13_r4fwe"]
-[ext_resource type="PackedScene" uid="uid://djxcmwhekrggy" path="res://assets/Spike/draw_spike.tscn" id="14_faope"]
+[ext_resource type="PackedScene" uid="uid://djxcmwhekrggy" path="res://Assets/Spike/draw_spike.tscn" id="14_faope"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ejm3i"]
 size = Vector2(149, 135.5)
@@ -93,7 +93,7 @@ frame_progress = 0.713841
 [node name="Portal" parent="." instance=ExtResource("11_b6chy")]
 position = Vector2(0, -16)
 
-[node name="Area2D" parent="Portal" index="2"]
+[node name="Area2D" parent="Portal" index="3"]
 script = ExtResource("2_a6xb8")
 
 [node name="Camera2D" type="Camera2D" parent="."]
