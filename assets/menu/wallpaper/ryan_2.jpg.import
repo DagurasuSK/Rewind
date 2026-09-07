@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c6tdrr1v8puux"
-path="res://.godot/imported/ryan_2.jpg-19a12e2665d1ecbf7348be2e347cd2e4.ctex"
+path="res://.godot/imported/ryan_2.jpg-ea457fd97ed4f14dba6698e19bec0ed6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/menu/wallpaper/ryan_2.jpg"
-dest_files=["res://.godot/imported/ryan_2.jpg-19a12e2665d1ecbf7348be2e347cd2e4.ctex"]
+source_file="res://assets/menu/wallpaper/ryan_2.jpg"
+dest_files=["res://.godot/imported/ryan_2.jpg-ea457fd97ed4f14dba6698e19bec0ed6.ctex"]
 
 [params]
 

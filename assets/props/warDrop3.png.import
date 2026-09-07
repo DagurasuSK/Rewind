@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c3ebhx0pci4ff"
-path="res://.godot/imported/warDrop3.png-524eea9c64bd23a955c5ce680534d646.ctex"
+path="res://.godot/imported/warDrop3.png-034c076144581d6001e2efbd44fcd13d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/props/warDrop3.png"
-dest_files=["res://.godot/imported/warDrop3.png-524eea9c64bd23a955c5ce680534d646.ctex"]
+source_file="res://assets/props/warDrop3.png"
+dest_files=["res://.godot/imported/warDrop3.png-034c076144581d6001e2efbd44fcd13d.ctex"]
 
 [params]
 
