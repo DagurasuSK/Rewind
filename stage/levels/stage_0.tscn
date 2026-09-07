@@ -23,6 +23,15 @@ size = Vector2(149, 135.5)
 
 [node name="WorldBase" type="Node2D"]
 
+[node name="ControlsLabel" type="Label" parent="."]
+offset_left = -228.0
+offset_top = -129.0
+offset_right = -114.0
+offset_bottom = -54.0
+text = "CONTROLS:
+MOVE: W A S D
+DASH: SHIFT"
+
 [node name="propsHolder" type="Node2D" parent="."]
 
 [node name="Computer" type="Sprite2D" parent="propsHolder"]

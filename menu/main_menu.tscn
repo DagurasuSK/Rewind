@@ -37,6 +37,12 @@ offset_right = 99.345
 offset_bottom = 340.0
 script = ExtResource("1_phfwy")
 
+[node name="ControlsLabel" type="Label" parent="MainMenuContainer"]
+layout_mode = 2
+text = "CONTROLS:
+MOVE: W A S D
+DASH: SHIFT"
+
 [node name="NewGameButton" type="Button" parent="MainMenuContainer"]
 layout_mode = 2
 text = "New Game"
