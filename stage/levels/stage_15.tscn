@@ -1,12 +1,12 @@
-[gd_scene load_steps=8 format=4 uid="uid://f1un4d7pxem7"]
+[gd_scene format=4 uid="uid://f1un4d7pxem7"]
 
-[ext_resource type="Script" path="res://scripts/stage.gd" id="1_ep3q2"]
-[ext_resource type="PackedScene" uid="uid://bfdhgj3bwxnrh" path="res://assets/player/player.tscn" id="2_jix0g"]
-[ext_resource type="PackedScene" uid="uid://dx0iv3hpajmud" path="res://assets/tileset/tile_map.tscn" id="3_wtcxv"]
-[ext_resource type="PackedScene" uid="uid://67fp3fdutm0q" path="res://assets/stage/portal.tscn" id="4_6frjm"]
-[ext_resource type="Script" path="res://scripts/end_adventure.gd" id="5_3e31n"]
+[ext_resource type="Script" uid="uid://di5d2cl8nfiti" path="res://scripts/stage.gd" id="1_ep3q2"]
+[ext_resource type="PackedScene" uid="uid://bfdhgj3bwxnrh" path="res://Assets/player/player.tscn" id="2_jix0g"]
+[ext_resource type="PackedScene" uid="uid://dx0iv3hpajmud" path="res://Assets/tileset/tile_map.tscn" id="3_wtcxv"]
+[ext_resource type="PackedScene" uid="uid://67fp3fdutm0q" path="res://Assets/stage/portal.tscn" id="4_6frjm"]
+[ext_resource type="Script" uid="uid://b1m706bwomni2" path="res://scripts/end_adventure.gd" id="5_3e31n"]
 [ext_resource type="PackedScene" uid="uid://dd45r3s3jbvmg" path="res://effects/VFX/CRT.tscn" id="6_2v5wh"]
-[ext_resource type="PackedScene" uid="uid://djxcmwhekrggy" path="res://assets/Spike/draw_spike.tscn" id="7_xa2yu"]
+[ext_resource type="PackedScene" uid="uid://djxcmwhekrggy" path="res://Assets/Spike/draw_spike.tscn" id="7_xa2yu"]
 
 [node name="WorldBase" type="Node2D"]
 script = ExtResource("1_ep3q2")

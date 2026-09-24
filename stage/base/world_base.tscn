@@ -1,29 +1,29 @@
-[gd_scene load_steps=7 format=3 uid="uid://bff5qurusthyj"]
+[gd_scene format=3 uid="uid://bff5qurusthyj"]
 
-[ext_resource type="Script" path="res://scripts/stage.gd" id="1_5pc46"]
+[ext_resource type="Script" uid="uid://di5d2cl8nfiti" path="res://scripts/stage.gd" id="1_5pc46"]
 [ext_resource type="PackedScene" uid="uid://bfdhgj3bwxnrh" path="res://Assets/player/player.tscn" id="2_vrjms"]
 [ext_resource type="PackedScene" uid="uid://dx0iv3hpajmud" path="res://Assets/tileset/tile_map.tscn" id="3_0g1f2"]
 [ext_resource type="PackedScene" uid="uid://67fp3fdutm0q" path="res://Assets/stage/portal.tscn" id="4_bmfvk"]
 [ext_resource type="PackedScene" uid="uid://dd45r3s3jbvmg" path="res://effects/VFX/CRT.tscn" id="5_qdhbq"]
 [ext_resource type="PackedScene" uid="uid://djxcmwhekrggy" path="res://Assets/Spike/draw_spike.tscn" id="7_4t18i"]
 
-[node name="WorldBase" type="Node2D"]
+[node name="WorldBase" type="Node2D" unique_id=1623411187]
 script = ExtResource("1_5pc46")
 
-[node name="Player" parent="." instance=ExtResource("2_vrjms")]
+[node name="Player" parent="." unique_id=735532854 instance=ExtResource("2_vrjms")]
 
-[node name="TileMapLayer" parent="." instance=ExtResource("3_0g1f2")]
+[node name="TileMapLayer" parent="." unique_id=1635433868 instance=ExtResource("3_0g1f2")]
 metadata/_edit_lock_ = true
 
-[node name="Portal" parent="." instance=ExtResource("4_bmfvk")]
+[node name="Portal" parent="." unique_id=2040079707 instance=ExtResource("4_bmfvk")]
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1029754698]
 metadata/_edit_lock_ = true
 
-[node name="CanvasLayer" parent="." instance=ExtResource("5_qdhbq")]
+[node name="CanvasLayer" parent="." unique_id=587420849 instance=ExtResource("5_qdhbq")]
 visible = true
 offset = Vector2(320, 180)
 transform = Transform2D(1, 0, 0, 1, 320, 180)
 
-[node name="draw_spike" parent="." instance=ExtResource("7_4t18i")]
+[node name="draw_spike" parent="." unique_id=562493627 instance=ExtResource("7_4t18i")]
 metadata/_edit_lock_ = true

@@ -1,9 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://cfx57rkrh68pi"]
+[gd_scene format=4 uid="uid://cfx57rkrh68pi"]
 
-[ext_resource type="Script" path="res://scripts/stage.gd" id="1_cjwj1"]
-[ext_resource type="PackedScene" uid="uid://dx0iv3hpajmud" path="res://assets/tileset/tile_map.tscn" id="2_d3gag"]
-[ext_resource type="PackedScene" uid="uid://bfdhgj3bwxnrh" path="res://assets/player/player.tscn" id="3_y58dv"]
-[ext_resource type="PackedScene" uid="uid://67fp3fdutm0q" path="res://assets/stage/portal.tscn" id="4_mxvx7"]
+[ext_resource type="Script" uid="uid://di5d2cl8nfiti" path="res://scripts/stage.gd" id="1_cjwj1"]
+[ext_resource type="PackedScene" uid="uid://dx0iv3hpajmud" path="res://Assets/tileset/tile_map.tscn" id="2_d3gag"]
+[ext_resource type="PackedScene" uid="uid://bfdhgj3bwxnrh" path="res://Assets/player/player.tscn" id="3_y58dv"]
+[ext_resource type="PackedScene" uid="uid://67fp3fdutm0q" path="res://Assets/stage/portal.tscn" id="4_mxvx7"]
 [ext_resource type="PackedScene" uid="uid://dd45r3s3jbvmg" path="res://effects/VFX/CRT.tscn" id="5_ate2i"]
 
 [node name="Stage1" type="Node2D"]

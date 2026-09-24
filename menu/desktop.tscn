@@ -1,12 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://dduplujc11ahm"]
+[gd_scene format=3 uid="uid://dduplujc11ahm"]
 
 [ext_resource type="Theme" uid="uid://bgespdhrhpd1" path="res://themes/menu_theme.tres" id="1_5wa4j"]
-[ext_resource type="Script" path="res://menu/desktop_menu.gd" id="2_c8iuj"]
-[ext_resource type="Texture2D" uid="uid://bkbpm3jnqclbp" path="res://assets/menu/wallpaper/ryan_1.jpeg" id="3_d8la4"]
-[ext_resource type="Texture2D" uid="uid://1kcwg1e8n01s" path="res://assets/menu/icons/full_life.png" id="4_gat8x"]
-[ext_resource type="Texture2D" uid="uid://bwd1n0frh5tmr" path="res://assets/menu/icons/docs.png" id="5_38tg5"]
-[ext_resource type="Texture2D" uid="uid://bddi114e4iuc2" path="res://assets/menu/icons/mauro69.png" id="6_s48bh"]
-[ext_resource type="Texture2D" uid="uid://dluuvwnm5qrj" path="res://assets/menu/icons/recycle_bin.png" id="7_2ldgi"]
+[ext_resource type="Script" uid="uid://c51otyoofc3qy" path="res://menu/desktop_menu.gd" id="2_c8iuj"]
+[ext_resource type="Texture2D" uid="uid://bkbpm3jnqclbp" path="res://Assets/menu/wallpaper/ryan_1.jpeg" id="3_d8la4"]
+[ext_resource type="Texture2D" uid="uid://1kcwg1e8n01s" path="res://Assets/menu/icons/full_life.png" id="4_gat8x"]
+[ext_resource type="Texture2D" uid="uid://bwd1n0frh5tmr" path="res://Assets/menu/icons/docs.png" id="5_38tg5"]
+[ext_resource type="Texture2D" uid="uid://bddi114e4iuc2" path="res://Assets/menu/icons/mauro69.png" id="6_s48bh"]
+[ext_resource type="Texture2D" uid="uid://dluuvwnm5qrj" path="res://Assets/menu/icons/recycle_bin.png" id="7_2ldgi"]
 
 [node name="Desktop" type="Control"]
 layout_mode = 3

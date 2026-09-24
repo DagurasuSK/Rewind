@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://b3cjiwvftuh4a"]
+[gd_scene format=3 uid="uid://b3cjiwvftuh4a"]
 
-[ext_resource type="Script" path="res://scripts/end_stage.gd" id="1_udtp6"]
-[ext_resource type="Texture2D" uid="uid://nygpx05rc6sn" path="res://assets/menu/wallpaper/ryan_happy.jpg" id="2_qxbwc"]
+[ext_resource type="Script" uid="uid://cke5v1siym77q" path="res://scripts/end_stage.gd" id="1_udtp6"]
+[ext_resource type="Texture2D" uid="uid://nygpx05rc6sn" path="res://Assets/menu/wallpaper/ryan_happy.jpg" id="2_qxbwc"]
 [ext_resource type="Theme" uid="uid://bgespdhrhpd1" path="res://themes/menu_theme.tres" id="3_ok28f"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gy5kx"]

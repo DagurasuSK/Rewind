@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=8 format=3 uid="uid://bgespdhrhpd1"]
+[gd_resource type="Theme" format=3 uid="uid://bgespdhrhpd1"]
 
 [ext_resource type="FontFile" uid="uid://bngyfebh5qse4" path="res://fonts/kenney/Kenney Pixel.ttf" id="1_usj0u"]
 [ext_resource type="Texture2D" uid="uid://bw66mwx6g7bmb" path="res://Assets/menu/slider_grabber.png" id="2_br1m5"]
